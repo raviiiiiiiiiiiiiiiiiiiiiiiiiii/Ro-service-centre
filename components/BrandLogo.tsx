@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 interface BrandLogoProps {
@@ -5,77 +7,53 @@ interface BrandLogoProps {
   className?: string;
 }
 
+const BRAND_LOGOS: Record<string, { src: string; alt: string }> = {
+  kent: {
+    src: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1787456695/IMG-20260822-WA0038_eea1tq.jpg',
+    alt: 'Kent Mineral RO Water Purifiers Logo',
+  },
+  lg: {
+    src: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786032689/images_5_t36ctz.png',
+    alt: 'LG Puricare Water Purifier Logo',
+  },
+  aquaguard: {
+    src: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1787456695/IMG-20260822-WA0036_aymptj.jpg',
+    alt: 'Aquaguard Water Purifier Logo',
+  },
+  pureit: {
+    src: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1787456695/IMG-20260822-WA0034_vmyqqk.jpg',
+    alt: 'Pureit Water Purifier Logo',
+  },
+  aosmith: {
+    src: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1787456694/IMG-20260822-WA0039_l3llhm.jpg',
+    alt: 'A. O. Smith Water Purifier Logo',
+  },
+};
+
 export default function BrandLogo({ brandKey, className = '' }: BrandLogoProps) {
-  const normalizedKey = brandKey.toLowerCase().replace(/\s+/g, '');
+  const normalizedKey = brandKey.toLowerCase().replace(/[\s\-_]+/g, '');
+  const logo =
+    BRAND_LOGOS[normalizedKey] ||
+    (normalizedKey.includes('smith') ? BRAND_LOGOS.aosmith : null) ||
+    (normalizedKey.includes('pure') ? BRAND_LOGOS.pureit : null) ||
+    (normalizedKey.includes('aqua') ? BRAND_LOGOS.aquaguard : null);
 
-  switch (normalizedKey) {
-    case 'kent':
-      return (
-        <div className={`inline-flex items-center justify-center p-1 bg-white rounded-md ${className}`}>
-          <img
-            src="/assets/logos/kent-mineral-ro.svg"
-            alt="KENT Mineral RO™ Water Purifiers"
-            className="h-20 sm:h-24 w-auto max-w-[280px] object-contain drop-shadow-sm"
-          />
-        </div>
-      );
-
-    case 'aquaguard':
-      return (
-        <div className={`inline-flex items-center justify-center p-2 bg-white rounded-md ${className}`}>
-          <img
-            src="/assets/logos/aquaguard.svg"
-            alt="Aquaguard Paani Ka Doctor"
-            className="h-18 sm:h-22 w-auto max-w-[280px] object-contain drop-shadow-sm"
-          />
-        </div>
-      );
-
-    case 'pureit':
-      return (
-        <div className={`inline-flex items-center justify-center p-2 bg-white rounded-md ${className}`}>
-          <img
-            src="/assets/logos/pureit.png"
-            alt="Pureit Water Purifier by Unilever"
-            className="h-16 sm:h-20 w-auto max-w-[240px] object-contain drop-shadow-sm"
-          />
-        </div>
-      );
-
-    case 'aosmith':
-      return (
-        <div className={`inline-flex items-center justify-center p-2 bg-white rounded-md ${className}`}>
-          <img
-            src="/assets/logos/aosmith.png"
-            alt="A. O. Smith Water Purifier"
-            className="h-14 sm:h-18 w-auto max-w-[240px] object-contain drop-shadow-sm"
-          />
-        </div>
-      );
-
-    case 'lg':
-      return (
-        <div className={`inline-flex items-center justify-center px-4 py-2 bg-white rounded-md border border-slate-200 shadow-sm ${className}`}>
-          <div className="flex items-center gap-3">
-            <img
-              src="/assets/logos/lg.svg"
-              alt="LG Electronics"
-              className="h-10 sm:h-12 w-auto object-contain"
-            />
-            <div className="flex flex-col text-left">
-              <span className="text-slate-800 font-black text-xl tracking-tight leading-none">PuriCare</span>
-              <span className="text-slate-500 text-[10px] font-bold tracking-wider uppercase">True RO Purifier</span>
-            </div>
-          </div>
-        </div>
-      );
-
-    default:
-      return (
-        <div className={`inline-flex flex-col items-center justify-center border-2 border-[#004e9a] rounded-sm overflow-hidden bg-white shadow-sm p-3 ${className}`}>
-          <span className="text-[#004e9a] font-black text-2xl tracking-wider uppercase">{brandKey}</span>
-          <span className="text-slate-500 text-xs font-bold uppercase tracking-wider">Water Purifier Service</span>
-        </div>
-      );
+  if (logo) {
+    return (
+      <div className={`inline-flex items-center justify-center p-1 bg-white rounded ${className}`}>
+        <img
+          src={logo.src}
+          alt={logo.alt}
+          className="h-16 sm:h-20 md:h-24 w-auto max-w-[260px] sm:max-w-[300px] object-contain mx-auto"
+        />
+      </div>
+    );
   }
+
+  return (
+    <div className={`inline-flex flex-col items-center justify-center border-2 border-[#004e9a] rounded-sm overflow-hidden bg-white shadow-xs p-3 ${className}`}>
+      <span className="text-[#004e9a] font-black text-2xl tracking-wider uppercase">{brandKey}</span>
+      <span className="text-slate-500 text-xs font-bold uppercase tracking-wider">Water Purifier Service</span>
+    </div>
+  );
 }

@@ -3,6 +3,7 @@ export interface BrandData {
   title: string;
   description: string;
   heroImage: string;
+  applianceImage?: string;
   services: { title: string; desc: string; }[];
   problems: { title: string; desc: string; }[];
   faqs: { q: string; a: string; }[];
@@ -13,7 +14,8 @@ export const brandData: Record<string, BrandData> = {
     name: 'LG',
     title: 'Expert LG RO Repair & Service in Bangalore',
     description: 'Specialized doorstep service for LG PuriCare and other LG water purifiers. We provide genuine LG spare parts, membrane replacement, and complete AMC solutions across Bangalore.',
-    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194339_j4gjia.jpg',
+    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788891175/file_00000000dba081faae368d55c826d5ae_4_lvnc1q.png',
+    applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194339_j4gjia.jpg',
     services: [
       { title: 'LG RO Repair', desc: 'Fast repair for LG PuriCare water leakages, motor issues, and power failures.' },
       { title: 'Filter Replacement', desc: 'Genuine LG sediment filters, pre-carbon filters, and RO membrane replacement.' },
@@ -40,7 +42,8 @@ export const brandData: Record<string, BrandData> = {
     name: 'Aquaguard',
     title: 'Trusted Aquaguard Repair & Service in Bangalore',
     description: 'Expert servicing for Aquaguard Active Copper, Biotron, and other Eureka Forbes water purifiers. Doorstep repair, filter replacement, and AMC plans.',
-    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194328_pcq7uw.png',
+    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788891175/file_00000000dba081faae368d55c826d5ae_2_jbk0uw.png',
+    applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194328_pcq7uw.png',
     services: [
       { title: 'Aquaguard Repair', desc: 'Expert resolution for pump failures, leakages, and circuit issues.' },
       { title: 'Active Copper Service', desc: 'Specialized maintenance for Active Copper and Biotron cartridges.' },
@@ -67,7 +70,8 @@ export const brandData: Record<string, BrandData> = {
     name: 'Kent',
     title: 'Reliable Kent RO Service in Bangalore',
     description: 'Professional repair and maintenance for Kent Grand, Prime, Supreme, Pearl, and Mineral RO models. Doorstep service in 60-90 minutes.',
-    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194243_himoc3.jpg',
+    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788891175/file_00000000dba081faae368d55c826d5ae_1_tat7ba.png',
+    applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194243_himoc3.jpg',
     services: [
       { title: 'Kent RO Repair', desc: 'Troubleshooting and repair for all Kent Mineral RO models.' },
       { title: 'Filter & Membrane', desc: 'Replacement of Kent sediment, carbon filters, and RO membranes.' },
@@ -94,7 +98,8 @@ export const brandData: Record<string, BrandData> = {
     name: 'Pureit',
     title: 'Expert Pureit RO Service & GKK Replacement',
     description: 'Fast and reliable Pureit RO repair and Germkill Kit (GKK) replacement in Bangalore. Genuine spares and doorstep service.',
-    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194420_cdv3yx.jpg',
+    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788891175/file_00000000dba081faae368d55c826d5ae_uhitwj.png',
+    applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194420_cdv3yx.jpg',
     services: [
       { title: 'Pureit RO Repair', desc: 'Quick fixes for Pureit water purifiers, including leakages and motor issues.' },
       { title: 'GKK Replacement', desc: 'Genuine Germkill Kit (GKK) replacement for continuous safe water.' },
@@ -121,7 +126,8 @@ export const brandData: Record<string, BrandData> = {
     name: 'AO Smith',
     title: 'AO Smith RO Service & Repair in Bangalore',
     description: 'Specialized doorstep service for AO Smith water purifiers. Expert handling of MIN-TECH, SCM filters, Z8, Z9, and other premium models.',
-    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194311_vmj5ot.jpg',
+    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788891175/file_00000000dba081faae368d55c826d5ae_3_fdq1qh.png',
+    applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194311_vmj5ot.jpg',
     services: [
       { title: 'AO Smith Repair', desc: 'Expert troubleshooting for AO Smith RO purifiers and smart displays.' },
       { title: 'MIN-TECH Filter Change', desc: 'Replacement of SCM, MIN-TECH, and advance RO membranes.' },

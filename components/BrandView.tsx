@@ -72,7 +72,7 @@ export default function BrandView({ data }: BrandViewProps) {
         </section>
 
         {/* 4. Mid-Page Bring Home Banner */}
-        <BrandMidBanner brandName={brandName} purifierImage={data.heroImage} />
+        <BrandMidBanner brandName={brandName} purifierImage={data.applianceImage || data.heroImage} />
 
         {/* 5. Our {Brand} Ro Services */}
         <section className="text-center space-y-4">
