@@ -198,27 +198,6 @@ export default function BrandView({ data }: BrandViewProps) {
         phone={phone}
       />
 
-      {/* Floating 'Click To Call' Round Rectangular Pill */}
-      <div className="fixed bottom-20 sm:bottom-22 right-3 sm:right-6 z-50">
-        <a
-          href={`tel:${phone}`}
-          className="inline-flex items-center gap-2 sm:gap-2.5 bg-white hover:bg-slate-50 border-2 border-[#0077c8] text-[#004e9a] rounded-full px-3.5 py-1.5 sm:px-4 sm:py-2 shadow-[0_8px_25px_rgba(0,0,0,0.18)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.25)] transition-all font-bold group active:scale-95"
-          title={`Click to call ${phone}`}
-        >
-          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#0077c8] group-hover:bg-[#005f9e] flex items-center justify-center text-white transition-colors shadow-sm">
-            <Phone size={14} className="fill-current animate-pulse" />
-          </div>
-          <div className="flex flex-col text-left leading-tight">
-            <span className="text-[9px] sm:text-[10px] text-[#0077c8] font-black uppercase tracking-wider">
-              Click To Call
-            </span>
-            <span className="text-xs sm:text-sm md:text-base font-black text-[#004e9a]">
-              {phone}
-            </span>
-          </div>
-        </a>
-      </div>
-
       {/* Sticky Two-Button Footer: Call Us & Book Now */}
       <div className="fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 py-2.5 sm:py-3 px-3 sm:px-6 shadow-[0_-4px_20px_rgba(0,0,0,0.18)]">
         <div className="max-w-xl mx-auto grid grid-cols-2 gap-2.5 sm:gap-4">

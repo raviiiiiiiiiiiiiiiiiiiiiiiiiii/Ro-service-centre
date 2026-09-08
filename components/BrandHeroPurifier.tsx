@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { Phone } from 'lucide-react';
 import BrandLogo from '@/components/BrandLogo';
 
 interface BrandHeroPurifierProps {
@@ -93,6 +94,26 @@ export default function BrandHeroPurifier({
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Floating 'Click To Call' Pill in Bottom Right (matching reference screenshot) */}
+          <div className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 z-30">
+            <a
+              href={`tel:${phone}`}
+              className="inline-flex items-center gap-2 bg-[#0077c8]/95 hover:bg-[#005f9e] border-2 border-white text-white rounded-full px-2.5 py-1 sm:px-3.5 sm:py-1.5 shadow-xl transition-all font-bold text-xs sm:text-sm active:scale-95"
+            >
+              <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white flex items-center justify-center text-[#0077c8] shadow-sm">
+                <Phone size={13} className="fill-current" />
+              </div>
+              <div className="flex flex-col text-left leading-tight pr-1">
+                <span className="text-[8px] sm:text-[9px] text-white/90 font-extrabold uppercase tracking-wider">
+                  Click To Call
+                </span>
+                <span className="text-[11px] sm:text-sm font-black text-white">
+                  {phone}
+                </span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
