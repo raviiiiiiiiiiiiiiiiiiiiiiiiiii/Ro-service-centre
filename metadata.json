@@ -1,0 +1,6 @@
+{
+  "name": "RO Service Centre Online",
+  "description": "Professional RO repair, service and installation at your doorstep.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
