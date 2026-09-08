@@ -1,119 +1,190 @@
-import { ArrowRight, Phone, Wrench, ChevronDown } from 'lucide-react';
+'use client';
+
+import React from 'react';
+import { Phone, Clock } from 'lucide-react';
 import type { BrandData } from '@/data/brands';
-import WhyChooseUs from '@/components/WhyChooseUs';
-import Testimonials from '@/components/Testimonials';
-import QuickBooking from '@/components/QuickBooking';
+import BrandHeader from '@/components/BrandHeader';
+import BrandHeroPurifier from '@/components/BrandHeroPurifier';
+import BrandMidBanner from '@/components/BrandMidBanner';
+import BrandBookingForm from '@/components/BrandBookingForm';
+import BrandFooter from '@/components/BrandFooter';
+import WaterSplashIllustration from '@/components/WaterSplashIllustration';
 
-export default function BrandView({ data }: { data: BrandData }) {
+interface BrandViewProps {
+  data: BrandData;
+}
+
+export default function BrandView({ data }: BrandViewProps) {
+  // Determine brand key
+  const brandName = data.name;
+  const brandKey = brandName.toLowerCase().replace(/\s+/g, '');
+  const phone = '08050291180';
+  const email = 'authorizedservicecenter111@gmail.com';
+  const city = 'BENGALURU';
+  const state = 'Karnataka';
+
   return (
-    <>
-      <section className="relative overflow-hidden bg-gradient-to-b from-surface-container-low via-surface to-background pb-spacing-3xl pt-spacing-xl">
-        <div className="absolute -left-32 -top-20 h-96 w-96 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
-        <div className="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-spacing-xl items-center">
-            <div className="flex flex-col items-start order-2 lg:order-1">
-              <h1 className="font-display-xl text-display-xl tracking-tight text-on-surface mb-spacing-xs">
-                {data.title}
-              </h1>
-              <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-spacing-lg leading-relaxed">
-                {data.description}
-              </p>
-              <div className="flex flex-wrap items-center gap-spacing-md">
-                <a className="inline-flex items-center gap-spacing-xs px-spacing-xl py-spacing-sm rounded-full bg-primary text-on-primary font-label-lg text-label-lg shadow-lg hover:bg-secondary transition-all" href="#quick-booking">
-                  <span>Book Service</span>
-                  <ArrowRight size={18} />
-                </a>
-                <a className="inline-flex items-center gap-spacing-xs px-spacing-xl py-spacing-sm rounded-full bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-sm hover:bg-surface-container-high transition-all" href="tel:08050291180">
-                  <Phone size={18} />
-                  <span>Call 08050291180</span>
-                </a>
-              </div>
+    <div className="min-h-screen bg-white text-gray-800 font-sans selection:bg-[#1859c2] selection:text-white">
+      {/* 1. Header with Logo, Location, Toll Free, and Navigation Bar */}
+      <BrandHeader
+        phone={phone}
+        tollFree="18001201622"
+        locationCity="Bengaluru"
+        locationState={state}
+      />
+
+      {/* 2. Brand Logo Box, Hero Purifier Graphic with Tech Badges, and Royal Blue Call Banner */}
+      <BrandHeroPurifier
+        brandName={brandName}
+        brandKey={brandKey}
+        purifierImage={data.heroImage}
+        phone={phone}
+      />
+
+      {/* Main Content Container */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 md:py-10 space-y-10">
+        
+        {/* 3. Title and Introduction */}
+        <section className="text-center space-y-4">
+          <h1 className="text-gray-900 font-semibold text-2xl sm:text-3xl md:text-4xl tracking-tight">
+            {brandName} Ro Service Center
+          </h1>
+          <div className="text-gray-700 text-sm sm:text-base leading-relaxed space-y-3 max-w-3xl mx-auto">
+            <p>
+              Looking for a <strong className="font-semibold text-gray-900">reliable {brandName} Ro service center</strong> for your water heater or RO water purifier? We provide <strong className="font-semibold text-gray-900">professional repair, maintenance, and installation services</strong> for all {brandName} Ro models. Our experienced and factory-trained technicians deliver quick diagnosis, accurate repairs, and <strong className="font-semibold text-gray-900">long-lasting solutions</strong> to ensure uninterrupted performance of your appliance.
+            </p>
+            <p>
+              Whether it&apos;s a malfunctioning geyser, reduced RO water flow, leakage, or error indicators, our service team is equipped with the right tools, technical expertise, and genuine spare parts to restore your appliance to optimal working condition.
+            </p>
+          </div>
+        </section>
+
+        {/* 4. Mid-Page Bring Home Banner */}
+        <BrandMidBanner brandName={brandName} purifierImage={data.heroImage} />
+
+        {/* 5. Our {Brand} Ro Services */}
+        <section className="text-center space-y-4">
+          <h2 className="text-[#1a62d6] font-semibold text-2xl sm:text-3xl tracking-tight">
+            Our {brandName} Ro Services
+          </h2>
+          <div className="space-y-2 text-sm sm:text-base text-gray-700 max-w-2xl mx-auto leading-relaxed">
+            <p>
+              <strong className="font-semibold text-gray-900">{brandName} Ro Water Purifier Repair & Service</strong> – Complete troubleshooting and repair for power, leakage, and thermostat issues.
+            </p>
+            <p>
+              <strong className="font-semibold text-gray-900">{brandName} Ro Water Purifier Repair</strong> – Fix purification problems, filter issues, low flow, and error indicators.
+            </p>
+            <p>
+              <strong className="font-semibold text-gray-900">Installation & Uninstallation Support</strong> – Safe and professional installation or removal of {brandName} Ro appliances.
+            </p>
+            <p>
+              <strong className="font-semibold text-gray-900">Annual Maintenance Contracts (AMC)</strong> – Affordable AMC plans for regular servicing and preventive maintenance.
+            </p>
+            <p>
+              <strong className="font-semibold text-gray-900">Genuine Spare Parts Replacement</strong> – Only high-quality and compatible spare parts used for long-term reliability.
+            </p>
+          </div>
+        </section>
+
+        {/* 6. Common {Brand} Ro Problems We Fix */}
+        <section className="text-center space-y-4">
+          <h2 className="text-[#1a62d6] font-semibold text-2xl sm:text-3xl tracking-tight">
+            Common {brandName} Ro Problems We Fix
+          </h2>
+          <div className="space-y-1.5 text-sm sm:text-base text-gray-700 max-w-xl mx-auto">
+            <p>Water heater not heating properly</p>
+            <p>Geyser leakage, power failure, or tripping issues</p>
+            <p>{brandName} Ro RO not purifying water effectively</p>
+            <p>Low water flow or slow dispensing from RO purifier</p>
+            <p>Error lights, warning indicators, or unusual noise</p>
+          </div>
+        </section>
+
+        {/* 7. Why Choose Our {Brand} Ro Service Center? */}
+        <section className="text-center space-y-4">
+          <h2 className="text-[#1a62d6] font-semibold text-2xl sm:text-3xl tracking-tight">
+            Why Choose Our {brandName} Ro Service Center?
+          </h2>
+          <div className="space-y-2 text-sm sm:text-base text-gray-700 max-w-2xl mx-auto leading-relaxed">
+            <p>
+              <strong className="font-semibold text-gray-900">Experienced & Verified Technicians</strong> – Skilled professionals trained to handle all {brandName} Ro models.
+            </p>
+            <p>
+              <strong className="font-semibold text-gray-900">Same-Day Doorstep Service</strong> – Fast response and quick service at your location.
+            </p>
+            <p>
+              <strong className="font-semibold text-gray-900">Affordable & Transparent Pricing</strong> – No hidden charges, clear cost estimates.
+            </p>
+            <p>
+              <strong className="font-semibold text-gray-900">Support for All {brandName} Ro Models</strong> – Old and new water heaters and RO systems covered.
+            </p>
+            <p>
+              <strong className="font-semibold text-gray-900">Customer Satisfaction Guaranteed</strong> – Quality service you can trust.
+            </p>
+          </div>
+        </section>
+
+        {/* 8. Book {Brand} Ro Service Today */}
+        <section className="text-center space-y-3">
+          <h2 className="text-[#1a62d6] font-semibold text-2xl sm:text-3xl tracking-tight">
+            Book {brandName} Ro Service Today
+          </h2>
+          <p className="text-gray-700 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+            Get <strong className="font-semibold text-gray-900">fast, dependable, and professional {brandName} Ro repair service</strong> at your doorstep. Our support team is ready to assist you with quick booking and immediate service scheduling.
+          </p>
+          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-sm sm:text-base font-semibold text-gray-800">
+            <a 
+              href={`tel:${phone}`}
+              className="inline-flex items-center gap-2 hover:text-[#1a62d6] transition-colors"
+            >
+              <Phone size={18} className="text-gray-800 fill-current" />
+              <span>Call Now for {brandName} Ro Service Support</span>
+            </a>
+            <div className="inline-flex items-center gap-2">
+              <Clock size={18} className="text-gray-800" />
+              <span>Same-Day Service Available</span>
             </div>
-            <div className="relative flex justify-center order-1 lg:order-2">
-              <div className="relative w-full max-w-md rounded-2xl overflow-hidden shadow-2xl bg-surface-container-lowest">
-                <img 
-                  className="w-full h-[380px] sm:h-[440px] lg:h-[460px] object-cover object-center" 
-                  src={data.heroImage} 
-                  alt={`${data.name} Service`} 
-                />
-              </div>
-            </div>
           </div>
-          
-          <QuickBooking />
-        </div>
-      </section>
+        </section>
 
-      <section className="py-spacing-3xl bg-surface" id="services-grid">
-        <div className="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop">
-          <div className="text-center max-w-2xl mx-auto mb-spacing-2xl">
-            <h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-spacing-2xs">
-              {data.name} Services We Provide
-            </h2>
+        {/* 9. Need More Help? */}
+        <section className="text-center space-y-2 pt-2">
+          <h2 className="text-[#1a62d6] font-semibold text-2xl sm:text-3xl tracking-tight">
+            Need More Help?
+          </h2>
+          <p className="text-gray-600 text-sm sm:text-base max-w-xl mx-auto">
+            Connect instantly with our dedicated support team for service requests, pricing details, or technical assistance.
+          </p>
+          <div className="pt-2">
+            <a
+              href={`tel:${phone}`}
+              className="inline-block text-gray-900 hover:text-[#1a62d6] text-base sm:text-lg font-bold tracking-wide transition-colors"
+            >
+              Call Now: {phone}
+            </a>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-spacing-lg">
-            {data.services.map((svc, i) => (
-              <div key={i} className="bg-surface-container-lowest rounded-2xl p-spacing-lg shadow-sm">
-                <div className="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-spacing-md">
-                  <Wrench size={24} />
-                </div>
-                <h3 className="font-headline-sm text-headline-sm text-on-surface mb-spacing-2xs">{svc.title}</h3>
-                <p className="font-body-md text-body-md text-on-surface-variant">{svc.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="py-spacing-3xl bg-surface-container-low">
-        <div className="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop">
-          <div className="text-center max-w-2xl mx-auto mb-spacing-2xl">
-            <h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-spacing-2xs">
-              Common {data.name} Problems We Fix
-            </h2>
+        {/* 10. Book Appointment Now Form with Decorative Water Splash */}
+        <section className="relative pt-4 pb-8">
+          {/* Decorative water splash along bottom left */}
+          <div className="absolute -left-12 -bottom-4 w-60 sm:w-80 md:w-96 z-0 pointer-events-none opacity-80">
+            <WaterSplashIllustration />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-spacing-md">
-            {data.problems.map((prob, i) => (
-              <div key={i} className="bg-surface-container-lowest p-spacing-lg rounded-2xl shadow-sm flex items-start gap-spacing-md">
-                <div className="w-12 h-12 rounded-xl bg-surface-container text-primary flex items-center justify-center shrink-0">
-                  <prob.icon size={24} />
-                </div>
-                <div>
-                  <h3 className="font-headline-sm text-headline-sm text-on-surface mb-spacing-3xs">{prob.title}</h3>
-                  <p className="font-body-md text-body-md text-on-surface-variant mb-spacing-xs">{prob.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      
-      <WhyChooseUs />
 
-      <section className="py-spacing-3xl bg-surface">
-        <div className="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop">
-          <div className="text-center max-w-2xl mx-auto mb-spacing-2xl">
-            <h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-spacing-2xs">
-              {data.name} Service FAQs
-            </h2>
+          {/* Form Card */}
+          <div className="relative z-10">
+            <BrandBookingForm brandName={brandName} phone={phone} />
           </div>
-          <div className="max-w-3xl mx-auto space-y-spacing-sm">
-            {data.faqs.map((faq, i) => (
-              <details key={i} className="group bg-surface-container-lowest rounded-2xl p-spacing-md shadow-sm transition-all open:shadow-md">
-                <summary className="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface cursor-pointer list-none outline-none">
-                  <span>{faq.q}</span>
-                  <ChevronDown className="text-primary group-open:rotate-180 transition-transform" />
-                </summary>
-                <div className="pt-spacing-sm font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                  {faq.a}
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
-      <Testimonials />
-    </>
+      {/* 11. Dark Navy 3-Box Footer */}
+      <BrandFooter
+        addressCity={city}
+        email={email}
+        phone={phone}
+      />
+    </div>
   );
 }

@@ -1,13 +1,10 @@
-import type React from 'react';
-import { Droplet, PowerOff, Gauge, FlaskConical, type LucideIcon } from 'lucide-react';
-
 export interface BrandData {
   name: string;
   title: string;
   description: string;
   heroImage: string;
   services: { title: string; desc: string; }[];
-  problems: { title: string; desc: string; icon: LucideIcon | React.ComponentType<{ size?: number; className?: string }>; }[];
+  problems: { title: string; desc: string; }[];
   faqs: { q: string; a: string; }[];
 }
 
@@ -24,10 +21,10 @@ export const brandData: Record<string, BrandData> = {
       { title: 'LG AMC Plans', desc: 'Comprehensive Annual Maintenance Contracts for worry-free LG purifier usage.' }
     ],
     problems: [
-      { title: 'LG PuriCare Leakage', desc: 'Water dripping from the filter housing or inlet valve.', icon: Droplet },
-      { title: 'Not Turning On', desc: 'Power supply or SMPS adapter failure in LG RO units.', icon: PowerOff },
-      { title: 'Low Water Flow', desc: 'Choked pre-filter or membrane causing slow water dispensing.', icon: Gauge },
-      { title: 'Bad Water Taste', desc: 'Depleted post-carbon filter leading to poor tasting water.', icon: FlaskConical }
+      { title: 'LG PuriCare Leakage', desc: 'Water dripping from the filter housing or inlet valve.' },
+      { title: 'Not Turning On', desc: 'Power supply or SMPS adapter failure in LG RO units.' },
+      { title: 'Low Water Flow', desc: 'Choked pre-filter or membrane causing slow water dispensing.' },
+      { title: 'Bad Water Taste', desc: 'Depleted post-carbon filter leading to poor tasting water.' }
     ],
     faqs: [
       { q: 'Do you use genuine LG PuriCare spare parts?', a: 'Yes, we only use 100% genuine and compatible spare parts for all LG RO repair and services to ensure optimal performance.' },
@@ -51,10 +48,10 @@ export const brandData: Record<string, BrandData> = {
       { title: 'Aquaguard AMC', desc: 'Complete annual maintenance plans covering regular checkups and parts.' }
     ],
     problems: [
-      { title: 'Water Leakage', desc: 'Common dripping issues from elbows and connectors.', icon: Droplet },
-      { title: 'Beeping Sound/Alarm', desc: 'Filter change alerts or UV lamp failure warnings.', icon: PowerOff },
-      { title: 'Slow Dispensing', desc: 'Clogged filters or membrane reducing the water flow rate.', icon: Gauge },
-      { title: 'Taste Issues', desc: 'High TDS or lack of Active Copper cartridge effectiveness.', icon: FlaskConical }
+      { title: 'Water Leakage', desc: 'Common dripping issues from elbows and connectors.' },
+      { title: 'Beeping Sound/Alarm', desc: 'Filter change alerts or UV lamp failure warnings.' },
+      { title: 'Slow Dispensing', desc: 'Clogged filters or membrane reducing the water flow rate.' },
+      { title: 'Taste Issues', desc: 'High TDS or lack of Active Copper cartridge effectiveness.' }
     ],
     faqs: [
       { q: 'Can you service Aquaguard Active Copper models?', a: 'Yes, our technicians are fully trained to service and replace cartridges for Aquaguard Active Copper and Biotron models.' },
@@ -78,10 +75,10 @@ export const brandData: Record<string, BrandData> = {
       { title: 'Kent AMC Plans', desc: 'Affordable Annual Maintenance Contracts for Kent RO systems.' }
     ],
     problems: [
-      { title: 'Continuous Waste Water', desc: 'Auto-flush valve or solenoid valve failure causing constant drain.', icon: Droplet },
-      { title: 'Dead Machine', desc: 'SMPS power adapter failure in Kent RO units.', icon: PowerOff },
-      { title: 'Tank Not Filling', desc: 'Low pressure switch issue or choked RO membrane.', icon: Gauge },
-      { title: 'UV Lamp Failure', desc: 'UV barrel issues or blown UV lamp requiring replacement.', icon: FlaskConical }
+      { title: 'Continuous Waste Water', desc: 'Auto-flush valve or solenoid valve failure causing constant drain.' },
+      { title: 'Dead Machine', desc: 'SMPS power adapter failure in Kent RO units.' },
+      { title: 'Tank Not Filling', desc: 'Low pressure switch issue or choked RO membrane.' },
+      { title: 'UV Lamp Failure', desc: 'UV barrel issues or blown UV lamp requiring replacement.' }
     ],
     faqs: [
       { q: 'Do you service Kent Grand Plus models?', a: 'Yes, we service all Kent models including Kent Grand, Grand Plus, Prime, Supreme, Pearl, and other Mineral RO variants.' },
@@ -105,10 +102,10 @@ export const brandData: Record<string, BrandData> = {
       { title: 'Pureit AMC', desc: 'Annual maintenance contracts to keep your Pureit running smoothly.' }
     ],
     problems: [
-      { title: 'Red Light Blinking', desc: 'Indicator for Germkill Kit (GKK) exhaustion requiring replacement.', icon: PowerOff },
-      { title: 'Water Leakage', desc: 'Dripping from the tank or internal pipe connections.', icon: Droplet },
-      { title: 'Slow Purified Water', desc: 'Blockage in the micro-fibre mesh or RO membrane.', icon: Gauge },
-      { title: 'Unusual Noise', desc: 'Vibrations or noise from the booster pump.', icon: FlaskConical }
+      { title: 'Red Light Blinking', desc: 'Indicator for Germkill Kit (GKK) exhaustion requiring replacement.' },
+      { title: 'Water Leakage', desc: 'Dripping from the tank or internal pipe connections.' },
+      { title: 'Slow Purified Water', desc: 'Blockage in the micro-fibre mesh or RO membrane.' },
+      { title: 'Unusual Noise', desc: 'Vibrations or noise from the booster pump.' }
     ],
     faqs: [
       { q: 'Do you provide original Pureit Germkill Kits?', a: 'Yes, we provide and install 100% genuine Pureit Germkill Kits (GKK) for all applicable models.' },
@@ -132,10 +129,10 @@ export const brandData: Record<string, BrandData> = {
       { title: 'AO Smith AMC', desc: 'Comprehensive maintenance plans for premium AO Smith models.' }
     ],
     problems: [
-      { title: 'Display Errors', desc: 'Fixing error codes or touch panel issues on Z8/Z9 models.', icon: PowerOff },
-      { title: 'Hot Water Not Working', desc: 'Heating element or thermostat issues in hot water RO models.', icon: FlaskConical },
-      { title: 'Tank Filling Slowly', desc: 'Choked pre-filters or RO membrane requiring flush.', icon: Gauge },
-      { title: 'Leakage Near Tap', desc: 'Dripping from the dispensing faucet or internal valves.', icon: Droplet }
+      { title: 'Display Errors', desc: 'Fixing error codes or touch panel issues on Z8/Z9 models.' },
+      { title: 'Hot Water Not Working', desc: 'Heating element or thermostat issues in hot water RO models.' },
+      { title: 'Tank Filling Slowly', desc: 'Choked pre-filters or RO membrane requiring flush.' },
+      { title: 'Leakage Near Tap', desc: 'Dripping from the dispensing faucet or internal valves.' }
     ],
     faqs: [
       { q: 'Can you service the AO Smith Z8 and Z9 models with hot water?', a: 'Yes, our technicians are experienced in servicing premium AO Smith models like Z8 and Z9, including their hot water dispensing mechanisms.' },
