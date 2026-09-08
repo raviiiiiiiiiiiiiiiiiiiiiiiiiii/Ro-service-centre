@@ -36,7 +36,7 @@ export default function BrandView({ data }: BrandViewProps) {
   };
 
   return (
-    <div className="min-h-screen bg-white text-gray-800 font-sans selection:bg-[#1859c2] selection:text-white pb-24 sm:pb-28">
+    <div className="min-h-screen bg-white text-gray-800 font-sans selection:bg-[#1859c2] selection:text-white">
       {/* 1. Header with Logo, Location, Toll Free, and Navigation Bar */}
       <BrandHeader
         phone={phone}
@@ -72,7 +72,11 @@ export default function BrandView({ data }: BrandViewProps) {
         </section>
 
         {/* 4. Mid-Page Bring Home Banner */}
-        <BrandMidBanner brandName={brandName} purifierImage={data.applianceImage || data.heroImage} />
+        <BrandMidBanner
+          brandName={brandName}
+          bannerImage={data.secondImage || data.heroImage}
+          phone={phone}
+        />
 
         {/* 5. Our {Brand} Ro Services */}
         <section className="text-center space-y-4">
