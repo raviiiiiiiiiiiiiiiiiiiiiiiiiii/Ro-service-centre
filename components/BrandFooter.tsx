@@ -80,7 +80,7 @@ export default function BrandFooter({
 
         {/* Bottom Copyright */}
         <div className="pt-4 border-t border-white/5 text-center text-[11px] sm:text-xs text-gray-400 font-normal">
-          © Copyright Authorised Service Center 2026 . All right reserved
+          © Copyright RO Service Centre Online 2026 . All right reserved
         </div>
       </div>
     </footer>

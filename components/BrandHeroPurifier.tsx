@@ -20,8 +20,8 @@ export default function BrandHeroPurifier({
   return (
     <div className="w-full bg-[#f8fafc] pt-2 pb-0">
       {/* Top Brand Logo Box */}
-      <div className="max-w-xs mx-auto text-center px-4 mb-5">
-        <div className="bg-white border border-gray-200 rounded shadow-sm p-4 inline-block mx-auto">
+      <div className="max-w-sm sm:max-w-md mx-auto text-center px-4 mb-5">
+        <div className="bg-white border border-gray-200 rounded shadow-sm p-2 sm:p-3 inline-block mx-auto">
           <BrandLogo brandKey={brandKey} />
         </div>
       </div>
@@ -48,7 +48,7 @@ export default function BrandHeroPurifier({
                 {brandName}
               </span>
               <span className="text-[#0284c7] font-semibold text-[8px] sm:text-[9px] tracking-tight block text-center">
-                Mineral RO™ Purifier
+                {brandKey === 'kent' ? 'Mineral RO™ Purifier' : 'RO Water Purifier'}
               </span>
             </div>
           </div>

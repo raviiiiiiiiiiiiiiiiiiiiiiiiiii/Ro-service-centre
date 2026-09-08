@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 712 430" width="712" height="430">
+  <!-- Outer Card Frame -->
+  <rect x="3" y="3" width="706" height="424" rx="10" fill="#ffffff" stroke="#004e9a" stroke-width="6"/>
+  
+  <!-- Blue Header Box -->
+  <path d="M 6 14 C 6 8.5 10.5 4 16 4 L 696 4 C 701.5 4 706 8.5 706 14 L 706 240 L 6 240 Z" fill="#004e9a"/>
+  
+  <!-- Official KENT glyphs directly from kent.co.in (scaled to fit perfectly) -->
+  <g transform="translate(38, 14) scale(0.9)">
+    <path d="M0 0h37.43v201.3H0z" fill="#ffffff" transform="translate(50.2 51.14)"/>
+    <path transform="translate(-1 -1)" fill="#ffffff" d="m203.83 253.45-74.98-110.06 71.69-91.25h-42.41l-68.66 93.29 69.38 108.02z"/>
+    <path transform="translate(-1 -1)" fill="#ffffff" d="M332.63 253.45v-35.73h-67.97v-47.06h67.97v-35.73h-67.97V87.87h67.97V52.14h-103.7v201.31z"/>
+    <path transform="translate(-1 -1)" fill="#ffffff" d="M522.24 253.45V52.14h-37.43V191L407.16 52.14h-39.48v201.31h37.44V113.57l78.21 139.88z"/>
+    <path transform="translate(-1 -1)" fill="#ffffff" d="M586.59 253.45V89.58h-39.25V52.14h115.93v37.44h-39.25v163.87z"/>
+  </g>
+
+  <!-- Middle section: Mineral RO™ -->
+  <g transform="translate(0, 240)">
+    <rect x="6" y="0" width="700" height="96" fill="#ffffff"/>
+    <text x="356" y="65" text-anchor="middle" fill="#004e9a" font-family="'Segoe UI', 'Trebuchet MS', Arial, sans-serif" font-size="58" font-weight="900" font-style="italic" letter-spacing="-0.5">Mineral RO<tspan font-size="30" dy="-24" font-style="normal" font-weight="700">™</tspan></text>
+    <path d="M 175 78 C 265 86 445 86 535 78" stroke="#004e9a" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Bottom Blue Strip: Water Purifiers -->
+  <g transform="translate(0, 336)">
+    <path d="M 6 0 L 706 0 L 706 82 C 706 87.5 701.5 92 696 92 L 16 92 C 10.5 92 6 87.5 6 82 Z" fill="#004e9a"/>
+    <text x="356" y="60" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="38" font-weight="800" letter-spacing="3.5">WATER PURIFIERS</text>
+  </g>
+</svg>

@@ -6,82 +6,75 @@ interface BrandLogoProps {
 }
 
 export default function BrandLogo({ brandKey, className = '' }: BrandLogoProps) {
-  const normalizedKey = brandKey.toLowerCase();
+  const normalizedKey = brandKey.toLowerCase().replace(/\s+/g, '');
 
   switch (normalizedKey) {
     case 'kent':
       return (
-        <div className={`inline-flex flex-col items-center justify-center border-2 border-[#004e9a] rounded-sm overflow-hidden bg-white shadow-sm ${className}`}>
-          <div className="bg-[#004e9a] w-full px-6 py-1.5 flex items-center justify-center">
-            <span className="text-white font-black text-2xl md:text-3xl tracking-wider font-sans">KENT</span>
-          </div>
-          <div className="bg-white w-full px-4 py-0.5 text-center border-b border-[#004e9a]/30">
-            <span className="text-[#004e9a] font-bold text-sm md:text-base italic tracking-tight">Mineral RO™</span>
-          </div>
-          <div className="bg-[#004e9a] w-full px-4 py-0.5 text-center">
-            <span className="text-white text-[11px] md:text-xs font-semibold uppercase tracking-wider">Water Purifiers</span>
-          </div>
+        <div className={`inline-flex items-center justify-center p-1 bg-white rounded-md ${className}`}>
+          <img
+            src="/assets/logos/kent-mineral-ro.svg"
+            alt="KENT Mineral RO™ Water Purifiers"
+            className="h-20 sm:h-24 w-auto max-w-[280px] object-contain drop-shadow-sm"
+          />
         </div>
       );
 
     case 'aquaguard':
       return (
-        <div className={`inline-flex flex-col items-center justify-center border-2 border-[#123e78] rounded-sm overflow-hidden bg-white shadow-sm ${className}`}>
-          <div className="bg-[#123e78] w-full px-6 py-2 flex items-center justify-center">
-            <span className="text-white font-extrabold text-2xl md:text-3xl tracking-tight font-sans">Aquaguard</span>
-          </div>
-          <div className="bg-[#0e7490] w-full px-4 py-0.5 text-center">
-            <span className="text-white text-[11px] md:text-xs font-bold uppercase tracking-wider">Paani Ka Doctor</span>
-          </div>
+        <div className={`inline-flex items-center justify-center p-2 bg-white rounded-md ${className}`}>
+          <img
+            src="/assets/logos/aquaguard.svg"
+            alt="Aquaguard Paani Ka Doctor"
+            className="h-18 sm:h-22 w-auto max-w-[280px] object-contain drop-shadow-sm"
+          />
         </div>
       );
 
     case 'pureit':
       return (
-        <div className={`inline-flex flex-col items-center justify-center border-2 border-[#0284c7] rounded-sm overflow-hidden bg-white shadow-sm ${className}`}>
-          <div className="bg-[#0284c7] w-full px-6 py-1.5 flex items-center justify-center gap-1.5">
-            <span className="text-white font-black text-2xl md:text-3xl tracking-tight lowercase font-sans">pureit</span>
-          </div>
-          <div className="bg-white w-full px-4 py-0.5 text-center border-t border-[#0284c7]/20">
-            <span className="text-[#0369a1] text-[11px] md:text-xs font-bold uppercase tracking-wider">by Unilever</span>
-          </div>
+        <div className={`inline-flex items-center justify-center p-2 bg-white rounded-md ${className}`}>
+          <img
+            src="/assets/logos/pureit.png"
+            alt="Pureit Water Purifier by Unilever"
+            className="h-16 sm:h-20 w-auto max-w-[240px] object-contain drop-shadow-sm"
+          />
         </div>
       );
 
     case 'aosmith':
       return (
-        <div className={`inline-flex flex-col items-center justify-center border-2 border-[#15803d] rounded-sm overflow-hidden bg-white shadow-sm ${className}`}>
-          <div className="bg-[#15803d] w-full px-6 py-2 flex items-center justify-center">
-            <span className="text-white font-black text-2xl md:text-3xl tracking-tight font-sans">A. O. Smith</span>
-          </div>
-          <div className="bg-white w-full px-4 py-0.5 text-center border-t border-[#15803d]/30">
-            <span className="text-[#15803d] text-[11px] md:text-xs font-bold uppercase tracking-wider">Innovation Has A Name</span>
-          </div>
+        <div className={`inline-flex items-center justify-center p-2 bg-white rounded-md ${className}`}>
+          <img
+            src="/assets/logos/aosmith.png"
+            alt="A. O. Smith Water Purifier"
+            className="h-14 sm:h-18 w-auto max-w-[240px] object-contain drop-shadow-sm"
+          />
         </div>
       );
 
     case 'lg':
       return (
-        <div className={`inline-flex flex-col items-center justify-center border-2 border-[#a21caf] rounded-sm overflow-hidden bg-white shadow-sm ${className}`}>
-          <div className="bg-[#a21caf] w-full px-6 py-1.5 flex items-center justify-center gap-2">
-            <span className="text-white font-black text-2xl md:text-3xl tracking-wide font-sans">LG</span>
-            <span className="text-white font-bold text-lg md:text-xl">PuriCare</span>
-          </div>
-          <div className="bg-white w-full px-4 py-0.5 text-center border-t border-[#a21caf]/20">
-            <span className="text-[#a21caf] text-[11px] md:text-xs font-bold uppercase tracking-wider">True RO Water Purifier</span>
+        <div className={`inline-flex items-center justify-center px-4 py-2 bg-white rounded-md border border-slate-200 shadow-sm ${className}`}>
+          <div className="flex items-center gap-3">
+            <img
+              src="/assets/logos/lg.svg"
+              alt="LG Electronics"
+              className="h-10 sm:h-12 w-auto object-contain"
+            />
+            <div className="flex flex-col text-left">
+              <span className="text-slate-800 font-black text-xl tracking-tight leading-none">PuriCare</span>
+              <span className="text-slate-500 text-[10px] font-bold tracking-wider uppercase">True RO Purifier</span>
+            </div>
           </div>
         </div>
       );
 
     default:
       return (
-        <div className={`inline-flex flex-col items-center justify-center border-2 border-[#004e9a] rounded-sm overflow-hidden bg-white shadow-sm ${className}`}>
-          <div className="bg-[#004e9a] w-full px-6 py-2 flex items-center justify-center">
-            <span className="text-white font-black text-2xl tracking-wider uppercase">{brandKey}</span>
-          </div>
-          <div className="bg-white w-full px-4 py-0.5 text-center">
-            <span className="text-[#004e9a] text-xs font-bold uppercase tracking-wider">Water Purifier Service</span>
-          </div>
+        <div className={`inline-flex flex-col items-center justify-center border-2 border-[#004e9a] rounded-sm overflow-hidden bg-white shadow-sm p-3 ${className}`}>
+          <span className="text-[#004e9a] font-black text-2xl tracking-wider uppercase">{brandKey}</span>
+          <span className="text-slate-500 text-xs font-bold uppercase tracking-wider">Water Purifier Service</span>
         </div>
       );
   }

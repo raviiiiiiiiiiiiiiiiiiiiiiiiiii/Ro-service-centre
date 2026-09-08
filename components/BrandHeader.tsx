@@ -64,14 +64,14 @@ export default function BrandHeader({
             </div>
             
             <div className="flex flex-col">
-              <div className="text-[#0e2a56] font-extrabold text-base md:text-lg leading-tight tracking-tight uppercase">
-                Authorised
+              <div className="text-[#0e2a56] font-black text-base md:text-lg leading-tight tracking-tight uppercase">
+                RO Service Centre
               </div>
-              <div className="text-[#0e2a56] font-extrabold text-base md:text-lg leading-tight tracking-tight uppercase">
-                Service Center
+              <div className="text-[#0284c7] font-black text-base md:text-lg leading-tight tracking-tight uppercase">
+                Online
               </div>
               <div className="mt-0.5">
-                <span className="inline-block bg-[#0284c7] text-white text-[10px] md:text-[11px] font-bold px-2 py-0.5 rounded-full tracking-wider uppercase">
+                <span className="inline-block bg-[#004e9a] text-white text-[10px] md:text-[11px] font-bold px-2 py-0.5 rounded-full tracking-wider uppercase">
                   Water Purifier
                 </span>
               </div>

@@ -58,7 +58,7 @@ export function Header() {
               <Droplets size={24} />
             </div>
             <div>
-              <div className="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">RO Service Centre</div>
+              <div className="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">RO Service Centre Online</div>
               <div className="font-label-sm text-label-sm text-tertiary tracking-normal">Pure Water · Healthy Life</div>
             </div>
           </Link>

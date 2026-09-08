@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" width="600" height="240">
+  <defs>
+    <linearGradient id="aquaBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#0b3874"/>
+      <stop offset="100%" stopColor="#0056b3"/>
+    </linearGradient>
+    <linearGradient id="dropGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#00b4d8"/>
+      <stop offset="100%" stopColor="#0077b6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Umbrella brand: EUREKA FORBES -->
+  <text x="300" y="44" text-anchor="middle" fill="#0b3874" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="900" letter-spacing="5">EUREKA FORBES</text>
+  <line x1="120" y1="54" x2="480" y2="54" stroke="#0077b6" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Iconic Water Droplet Logo Symbol -->
+  <g transform="translate(68, 65) scale(0.72)">
+    <circle cx="50" cy="50" r="46" fill="none" stroke="#0077b6" stroke-width="6" opacity="0.2"/>
+    <circle cx="50" cy="50" r="34" fill="none" stroke="#0096c7" stroke-width="5" opacity="0.4"/>
+    <path d="M50 14 C40 32 26 50 26 66 C26 79 37 90 50 90 C63 90 74 79 74 66 C74 50 60 32 50 14 Z" fill="url(#dropGrad)"/>
+    <circle cx="44" cy="54" r="5" fill="#ffffff" opacity="0.6"/>
+  </g>
+
+  <!-- Wordmark: Aquaguard -->
+  <g transform="translate(155, 126)">
+    <text x="0" y="0" fill="url(#aquaBlueGrad)" font-family="'Segoe UI', 'Trebuchet MS', Arial, sans-serif" font-size="68" font-weight="900" letter-spacing="-1">Aquaguard</text>
+    <circle cx="346" cy="-44" r="5" fill="#00b4d8"/>
+  </g>
+
+  <!-- Tagline: PAANI KA DOCTOR -->
+  <g transform="translate(300, 185)">
+    <rect x="-160" y="-22" width="320" height="34" rx="17" fill="#0b3874"/>
+    <text x="0" y="2" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="3">PAANI KA DOCTOR™</text>
+  </g>
+</svg>
