@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { Phone } from 'lucide-react';
 import BrandLogo from '@/components/BrandLogo';
 
 interface BrandHeroPurifierProps {
@@ -95,33 +94,7 @@ export default function BrandHeroPurifier({
               </div>
             </div>
           </div>
-
-          {/* Floating 'Click To Call' Pill in Bottom Right */}
-          <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-30">
-            <a
-              href={`tel:${phone}`}
-              className="inline-flex items-center gap-2 bg-white/95 hover:bg-white border-2 border-[#0077c8] text-[#004e9a] rounded-full px-3.5 py-1.5 shadow-xl hover:shadow-2xl transition-all font-bold text-xs sm:text-sm active:scale-95"
-            >
-              <div className="w-6 h-6 rounded-full bg-[#0077c8] flex items-center justify-center text-white">
-                <Phone size={13} className="fill-current" />
-              </div>
-              <div className="flex flex-col text-left leading-tight">
-                <span className="text-[10px] text-[#0077c8] font-bold uppercase tracking-wider">Click To Call</span>
-                <span className="text-xs sm:text-sm font-extrabold text-[#004e9a]">{phone}</span>
-              </div>
-            </a>
-          </div>
         </div>
-      </div>
-
-      {/* Full-width Royal Blue Call Banner */}
-      <div className="w-full bg-[#1859c2] hover:bg-[#1349a3] transition-colors py-3 sm:py-3.5 mt-4 sm:mt-5 text-center shadow-md">
-        <a 
-          href={`tel:${phone}`} 
-          className="inline-block text-white font-extrabold text-lg sm:text-xl md:text-2xl tracking-wide hover:underline"
-        >
-          Call Now : {phone}
-        </a>
       </div>
     </div>
   );

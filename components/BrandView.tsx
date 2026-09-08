@@ -24,7 +24,7 @@ export default function BrandView({ data }: BrandViewProps) {
   const state = 'Karnataka';
 
   return (
-    <div className="min-h-screen bg-white text-gray-800 font-sans selection:bg-[#1859c2] selection:text-white">
+    <div className="min-h-screen bg-white text-gray-800 font-sans selection:bg-[#1859c2] selection:text-white pb-20 sm:pb-24">
       {/* 1. Header with Logo, Location, Toll Free, and Navigation Bar */}
       <BrandHeader
         phone={phone}
@@ -185,6 +185,38 @@ export default function BrandView({ data }: BrandViewProps) {
         email={email}
         phone={phone}
       />
+
+      {/* Floating 'Click To Call' Round Rectangular Pill */}
+      <div className="fixed bottom-16 sm:bottom-18 right-4 sm:right-6 z-50">
+        <a
+          href={`tel:${phone}`}
+          className="inline-flex items-center gap-2 sm:gap-2.5 bg-white hover:bg-slate-50 border-2 border-[#0077c8] text-[#004e9a] rounded-full px-3.5 py-1.5 sm:px-4 sm:py-2 shadow-[0_8px_25px_rgba(0,0,0,0.18)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.25)] transition-all font-bold group active:scale-95"
+          title={`Click to call ${phone}`}
+        >
+          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#0077c8] group-hover:bg-[#005f9e] flex items-center justify-center text-white transition-colors shadow-sm">
+            <Phone size={14} className="fill-current animate-pulse" />
+          </div>
+          <div className="flex flex-col text-left leading-tight">
+            <span className="text-[9px] sm:text-[10px] text-[#0077c8] font-black uppercase tracking-wider">
+              Click To Call
+            </span>
+            <span className="text-xs sm:text-sm md:text-base font-black text-[#004e9a]">
+              {phone}
+            </span>
+          </div>
+        </a>
+      </div>
+
+      {/* Sticky Footer: Full-Width Call Now Line */}
+      <div className="fixed bottom-0 inset-x-0 z-40 bg-[#1859c2] hover:bg-[#1349a3] transition-colors py-2.5 sm:py-3 px-4 text-center shadow-[0_-4px_16px_rgba(0,0,0,0.25)] border-t border-white/20">
+        <a 
+          href={`tel:${phone}`} 
+          className="inline-flex items-center justify-center gap-2.5 text-white font-black text-base sm:text-xl md:text-2xl tracking-wide hover:underline active:scale-98 transition-transform"
+        >
+          <Phone size={20} className="fill-current" />
+          <span>Call Now : {phone}</span>
+        </a>
+      </div>
     </div>
   );
 }
