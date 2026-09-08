@@ -32,6 +32,28 @@ const BRAND_LOGOS: Record<string, { src: string; alt: string }> = {
 
 export default function BrandLogo({ brandKey, className = '' }: BrandLogoProps) {
   const normalizedKey = brandKey.toLowerCase().replace(/[\s\-_]+/g, '');
+
+  if (
+    normalizedKey === 'all' ||
+    normalizedKey === 'home' ||
+    normalizedKey === 'multi' ||
+    normalizedKey === 'multibrand' ||
+    normalizedKey === 'ro'
+  ) {
+    return (
+      <div className={`flex flex-wrap items-center justify-center gap-3 sm:gap-4 p-1.5 bg-white rounded ${className}`}>
+        {Object.entries(BRAND_LOGOS).map(([key, item]) => (
+          <img
+            key={key}
+            src={item.src}
+            alt={item.alt}
+            className="h-8 sm:h-10 md:h-11 w-auto max-w-[95px] sm:max-w-[120px] object-contain px-1 transition-transform hover:scale-105"
+          />
+        ))}
+      </div>
+    );
+  }
+
   const logo =
     BRAND_LOGOS[normalizedKey] ||
     (normalizedKey.includes('smith') ? BRAND_LOGOS.aosmith : null) ||

@@ -140,9 +140,22 @@ export default function BrandBookingForm({ brandName, phone = '08050291180' }: B
                 className="w-full border border-gray-300 rounded px-3.5 py-2.5 text-sm text-gray-700 bg-white focus:outline-none focus:border-[#1a62d6] focus:ring-1 focus:ring-[#1a62d6]"
               >
                 <option value="">Select Your Product</option>
-                <option value={`${brandName} RO Water Purifier`}>{brandName} RO Water Purifier</option>
-                <option value={`${brandName} UV / UF Purifier`}>{brandName} UV / UF Purifier</option>
-                <option value={`${brandName} Geyser / Water Heater`}>{brandName} Geyser / Water Heater</option>
+                {brandName === 'RO' || brandName === 'Multi-Brand' || brandName.toLowerCase().includes('multi') ? (
+                  <>
+                    <option value="Kent RO Purifier">Kent RO Purifier</option>
+                    <option value="Aquaguard / Eureka Forbes">Aquaguard / Eureka Forbes</option>
+                    <option value="Pureit RO Purifier">Pureit RO Purifier</option>
+                    <option value="AO Smith RO Purifier">AO Smith RO Purifier</option>
+                    <option value="LG PuriCare Purifier">LG PuriCare Purifier</option>
+                    <option value="Other RO Water Purifier">Other RO Water Purifier</option>
+                  </>
+                ) : (
+                  <>
+                    <option value={`${brandName} RO Water Purifier`}>{brandName} RO Water Purifier</option>
+                    <option value={`${brandName} UV / UF Purifier`}>{brandName} UV / UF Purifier</option>
+                    <option value={`${brandName} Geyser / Water Heater`}>{brandName} Geyser / Water Heater</option>
+                  </>
+                )}
                 <option value="Filter & Membrane Replacement">Filter & Membrane Replacement</option>
                 <option value="Annual Maintenance Contract (AMC)">Annual Maintenance Contract (AMC)</option>
                 <option value="General Troubleshooting & Repair">General Troubleshooting & Repair</option>

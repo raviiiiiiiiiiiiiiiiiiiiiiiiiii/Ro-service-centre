@@ -8,17 +8,17 @@ import ScrollToTop from '@/components/ScrollToTop';
 
 export default function LayoutContent({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  // Check if current route is any of the brand landing pages
-  const isBrandPage = pathname ? (
+  // Check if current route is homepage or any of the brand landing pages
+  const isCustomLayout = pathname === '/' || (pathname ? (
     pathname.endsWith('-service') || 
     pathname.includes('/kent-') || 
     pathname.includes('/aquaguard-') ||
     pathname.includes('/pureit-') ||
     pathname.includes('/lg-') ||
     pathname.includes('/aosmith-')
-  ) : false;
+  ) : false);
 
-  if (isBrandPage) {
+  if (isCustomLayout) {
     return (
       <>
         <ScrollToTop />
