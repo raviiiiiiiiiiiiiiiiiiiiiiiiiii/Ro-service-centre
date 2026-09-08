@@ -4,8 +4,7 @@ import {
   WhyChooseUs, 
   Troubleshooting, 
   Testimonials, 
-  FAQ, 
-  CTABanner 
+  FAQ
 } from '../components/Sections';
 
 export default function Home() {
@@ -17,7 +16,6 @@ export default function Home() {
       <Troubleshooting />
       <Testimonials />
       <FAQ />
-      <CTABanner />
     </>
   );
 }

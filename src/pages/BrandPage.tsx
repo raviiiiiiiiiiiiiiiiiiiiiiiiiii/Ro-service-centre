@@ -1,5 +1,5 @@
 import { ShieldCheck, Bike, Wrench, IndianRupee, ArrowRight, Phone, CheckCircle2, Droplet, PowerOff, Gauge, FlaskConical, ChevronDown } from 'lucide-react';
-import { WhyChooseUs, Testimonials, CTABanner, QuickBooking } from '../components/Sections';
+import { WhyChooseUs, Testimonials, QuickBooking } from '../components/Sections';
 
 export interface BrandData {
   name: string;
@@ -117,7 +117,6 @@ export default function BrandPage({ data }: { data: BrandData }) {
       </section>
 
       <Testimonials />
-      <CTABanner />
     </>
   );
 }

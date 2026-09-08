@@ -91,6 +91,7 @@ export function Header() {
               </div>
             </div>
           </div>
+          <a className="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="tel:08050291180">Contact</a>
         </nav>
         
         <div className="hidden lg:flex items-center gap-spacing-sm">
@@ -777,71 +778,33 @@ export function FAQ() {
   );
 }
 
-export function CTABanner() {
-  return (
-    <section className="py-spacing-2xl bg-gradient-to-r from-primary to-secondary text-on-primary shadow-xl">
-      <div className="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-spacing-lg text-center md:text-left">
-          <div>
-            <h2 className="font-headline-lg text-headline-lg font-bold tracking-tight text-on-primary mb-1">
-              Book Your RO Service Today
-            </h2>
-            <p className="font-body-lg text-body-lg text-on-primary/90">
-              Clean water is just a call away. Get quick, certified, and reliable doorstep service across Bangalore.
-            </p>
-          </div>
-          <div className="flex flex-wrap items-center gap-spacing-sm shrink-0">
-            <Link className="inline-flex items-center gap-spacing-xs px-spacing-xl py-spacing-sm rounded-full bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-lg hover:bg-surface-container-high transition-all" to="/#quick-booking">
-              <span>Book Service</span>
-              <ArrowRight size={18} />
-            </Link>
-            <a className="inline-flex items-center gap-spacing-xs px-spacing-xl py-spacing-sm rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md hover:bg-secondary transition-all" href="tel:08050291180">
-              <Phone size={18} />
-              <span>08050291180</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export function Footer() {
   return (
     <>
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-xl p-spacing-xs shadow-[0_-4px_20px_rgba(0,0,0,0.06)] flex items-center gap-spacing-xs lg:hidden">
-        <a className="flex-1 py-spacing-sm rounded-full bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center gap-spacing-2xs" href="tel:08050291180">
-          <Phone size={18} />Call Now
-        </a>
-        <a className="flex-1 py-spacing-sm rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-spacing-2xs shadow-[0_4px_14px_rgba(13,110,253,0.3)]" href="#">
-          <Wrench size={18} />Book Service
-        </a>
-      </div>
-      
-      <footer className="w-full bg-surface-container-low text-on-surface-variant pt-spacing-3xl pb-spacing-xl">
+      <footer className="w-full bg-[#0a192f] text-white pt-spacing-3xl pb-spacing-xl">
         <div className="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop space-y-spacing-2xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-spacing-xl">
             <div className="space-y-spacing-sm">
               <div className="flex items-center gap-spacing-xs">
-                <div className="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary">
+                <div className="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-white">
                   <Droplets size={20} />
                 </div>
-                <span className="font-headline-sm text-headline-sm text-on-surface">RO Service Centre</span>
+                <span className="font-headline-sm text-headline-sm text-white">RO Service Centre</span>
               </div>
-              <p className="text-body-sm font-body-sm">Officially registered MSME Enterprise (UDYAM-KR-03-0561611). Premier multi-brand water purifier repair, original filters, certified membrane replacement, and AMC services across Bangalore.</p>
+              <p className="text-body-sm font-body-sm text-white/70">Officially registered MSME Enterprise (UDYAM-KR-03-0561611). Premier multi-brand water purifier repair, original filters, certified membrane replacement, and AMC services across Bangalore.</p>
               <div className="pt-spacing-xs space-y-spacing-3xs text-label-sm font-label-sm">
-                <div className="flex items-center gap-spacing-xs text-on-surface">
+                <div className="flex items-center gap-spacing-xs text-white/90">
                   <ShieldCheck size={18} className="text-primary" />Certified Water Purifier Technicians
                 </div>
-                <div className="flex items-center gap-spacing-xs text-on-surface">
+                <div className="flex items-center gap-spacing-xs text-white/90">
                   <Clock size={18} className="text-primary" />60-90 Min Express Doorstep Response
                 </div>
               </div>
             </div>
             
             <div className="space-y-spacing-sm">
-              <div className="font-headline-sm text-headline-sm text-on-surface">Purifier Services</div>
-              <ul className="space-y-spacing-xs text-body-sm font-body-sm">
+              <div className="font-headline-sm text-headline-sm text-white">Purifier Services</div>
+              <ul className="space-y-spacing-xs text-body-sm font-body-sm text-white/70">
                 <li className="hover:text-primary transition-colors"><a href="#">Complete RO Repair & Diagnostics</a></li>
                 <li className="hover:text-primary transition-colors"><a href="#">Filter & RO Membrane Replacement</a></li>
                 <li className="hover:text-primary transition-colors"><a href="#">Installation & Relocation Service</a></li>
@@ -851,30 +814,30 @@ export function Footer() {
             </div>
             
             <div className="space-y-spacing-sm">
-              <div className="font-headline-sm text-headline-sm text-on-surface">Brand Centers</div>
-              <ul className="space-y-spacing-xs text-body-sm font-body-sm">
-                <li className="hover:text-primary transition-colors"><Link to="/kent-service">Kent RO Service Centre</Link></li>
-                <li className="hover:text-primary transition-colors"><Link to="/aquaguard-service">Aquaguard Purifier Service</Link></li>
-                <li className="hover:text-primary transition-colors"><Link to="/pureit-service">Pureit RO Service & Filter Kit</Link></li>
-                <li className="hover:text-primary transition-colors"><Link to="/aosmith-service">AO Smith Purifier Maintenance</Link></li>
-                <li className="hover:text-primary transition-colors"><Link to="/lg-service">LG Water Purifier Support</Link></li>
+              <div className="font-headline-sm text-headline-sm text-white">Company & Legal</div>
+              <ul className="space-y-spacing-xs text-body-sm font-body-sm text-white/70">
+                <li className="hover:text-primary transition-colors"><Link to="/about">About Us</Link></li>
+                <li className="hover:text-primary transition-colors"><Link to="/privacy-policy">Privacy Policy</Link></li>
+                <li className="hover:text-primary transition-colors"><Link to="/terms-and-conditions">Terms and Conditions</Link></li>
+                <li className="hover:text-primary transition-colors"><Link to="/cancellation-refund-policy">Cancellation & Refund Policy</Link></li>
+                <li className="hover:text-primary transition-colors"><Link to="/disclaimer">Disclaimer</Link></li>
               </ul>
             </div>
             
             <div className="space-y-spacing-sm">
-              <div className="font-headline-sm text-headline-sm text-on-surface">Head Office & Support</div>
-              <div className="space-y-spacing-xs text-body-sm font-body-sm">
+              <div className="font-headline-sm text-headline-sm text-white">Head Office & Support</div>
+              <div className="space-y-spacing-xs text-body-sm font-body-sm text-white/70">
                 <p className="flex items-start gap-spacing-xs">
                   <MapPin size={18} className="text-primary shrink-0 mt-0.5" />
                   <span>Bangalore, Karnataka, India</span>
                 </p>
                 <p className="flex items-center gap-spacing-xs">
                   <Phone size={18} className="text-primary shrink-0" />
-                  <a className="hover:text-primary" href="tel:08050291180">08050291180 / +91 88774 37666</a>
+                  <a className="hover:text-white transition-colors" href="tel:08050291180">08050291180 / +91 88774 37666</a>
                 </p>
                 <p className="flex items-center gap-spacing-xs">
                   <Mail size={18} className="text-primary shrink-0" />
-                  <a className="hover:text-primary" href="mailto:contact@roservice24x7.in">contact@roservice24x7.in</a>
+                  <a className="hover:text-white transition-colors" href="mailto:contact@roservice24x7.in">contact@roservice24x7.in</a>
                 </p>
                 <p className="flex items-center gap-spacing-xs">
                   <Clock size={18} className="text-primary shrink-0" />
@@ -884,23 +847,23 @@ export function Footer() {
             </div>
           </div>
           
-          <div className="space-y-spacing-xs">
-            <div className="font-label-md text-label-md text-on-surface uppercase tracking-wider">Bangalore Service Coverage Areas</div>
-            <p className="text-body-sm font-body-sm leading-relaxed">Whitefield, Koramangala, HSR Layout, Indiranagar, Electronic City, Marathahalli, Bellandur, Jayanagar, JP Nagar, Hebbal, Yelahanka, Rajajinagar, Banashankari, Malleshwaram, Sarjapur Road, BTM Layout, KR Puram, Varthur, Mahadevapura, Bannerghatta Road, HBR Layout, RT Nagar, Basavanagudi, Kalyan Nagar, Brookefield, Thanisandra, Domlur, New BEL Road, CV Raman Nagar.</p>
+          <div className="space-y-spacing-xs pt-spacing-sm">
+            <div className="font-label-md text-label-md text-white uppercase tracking-wider">Bangalore Service Coverage Areas</div>
+            <p className="text-body-sm font-body-sm text-white/60 leading-relaxed">Whitefield, Koramangala, HSR Layout, Indiranagar, Electronic City, Marathahalli, Bellandur, Jayanagar, JP Nagar, Hebbal, Yelahanka, Rajajinagar, Banashankari, Malleshwaram, Sarjapur Road, BTM Layout, KR Puram, Varthur, Mahadevapura, Bannerghatta Road, HBR Layout, RT Nagar, Basavanagudi, Kalyan Nagar, Brookefield, Thanisandra, Domlur, New BEL Road, CV Raman Nagar.</p>
           </div>
           
-          <div className="pt-spacing-lg flex flex-col md:flex-row items-center justify-between gap-spacing-md text-label-sm font-label-sm">
-            <div className="flex flex-wrap items-center gap-spacing-md">
-              <Link className="hover:text-primary" to="/privacy-policy">Privacy Policy</Link>
-              <Link className="hover:text-primary" to="/terms-and-conditions">Terms and Conditions</Link>
-              <Link className="hover:text-primary" to="/cancellation-refund-policy">Cancellation & Refund Policy</Link>
-              <Link className="hover:text-primary" to="/disclaimer">Disclaimer</Link>
-              <Link className="hover:text-primary" to="/cookie-policy">Cookie Policy</Link>
+          <div className="pt-spacing-lg border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-spacing-md text-label-sm font-label-sm text-white/60">
+            <div className="flex flex-wrap items-center justify-center gap-spacing-md">
+              <Link className="hover:text-white transition-colors" to="/privacy-policy">Privacy Policy</Link>
+              <Link className="hover:text-white transition-colors" to="/terms-and-conditions">Terms and Conditions</Link>
+              <Link className="hover:text-white transition-colors" to="/cancellation-refund-policy">Cancellation & Refund Policy</Link>
+              <Link className="hover:text-white transition-colors" to="/disclaimer">Disclaimer</Link>
+              <Link className="hover:text-white transition-colors" to="/cookie-policy">Cookie Policy</Link>
             </div>
-            <div>© 2024 RO Service Centre Online. All Rights Reserved.</div>
+            <div>© 2026 RO Service Centre Online. All Rights Reserved.</div>
           </div>
           
-          <div className="text-label-sm font-label-sm text-outline opacity-80 leading-relaxed">
+          <div className="text-label-sm font-label-sm text-white/40 leading-relaxed text-center lg:text-left">
             <p>Disclaimer: 'RO Service Centre Online' is an independent multi-brand service provider for RO water purifiers in Bangalore. Brand names, models, and logos (Kent, Aquaguard, Eureka Forbes, Pureit, AO Smith, LG, etc.) are registered trademarks of their respective owners and used purely for descriptive, repair, and reference purposes without representing official authorization.</p>
           </div>
         </div>
