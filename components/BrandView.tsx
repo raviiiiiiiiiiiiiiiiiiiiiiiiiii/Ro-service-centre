@@ -1,17 +1,10 @@
-import { ShieldCheck, Bike, Wrench, IndianRupee, ArrowRight, Phone, CheckCircle2, Droplet, PowerOff, Gauge, FlaskConical, ChevronDown } from 'lucide-react';
-import { WhyChooseUs, Testimonials, QuickBooking } from '../components/Sections';
+import { ArrowRight, Phone, Wrench, ChevronDown } from 'lucide-react';
+import type { BrandData } from '@/data/brands';
+import WhyChooseUs from '@/components/WhyChooseUs';
+import Testimonials from '@/components/Testimonials';
+import QuickBooking from '@/components/QuickBooking';
 
-export interface BrandData {
-  name: string;
-  title: string;
-  description: string;
-  heroImage: string;
-  services: { title: string; desc: string; }[];
-  problems: { title: string; desc: string; icon: any; }[];
-  faqs: { q: string; a: string; }[];
-}
-
-export default function BrandPage({ data }: { data: BrandData }) {
+export default function BrandView({ data }: { data: BrandData }) {
   return (
     <>
       <section className="relative overflow-hidden bg-gradient-to-b from-surface-container-low via-surface to-background pb-spacing-3xl pt-spacing-xl">
@@ -37,9 +30,13 @@ export default function BrandPage({ data }: { data: BrandData }) {
               </div>
             </div>
             <div className="relative flex justify-center order-1 lg:order-2">
-               <div className="relative w-full max-w-md rounded-2xl overflow-hidden shadow-2xl bg-surface-container-lowest">
-                 <img className="w-full h-[360px] object-cover" src={data.heroImage} alt={`${data.name} Service`} />
-               </div>
+              <div className="relative w-full max-w-md rounded-2xl overflow-hidden shadow-2xl bg-surface-container-lowest">
+                <img 
+                  className="w-full h-[380px] sm:h-[440px] lg:h-[460px] object-cover object-center" 
+                  src={data.heroImage} 
+                  alt={`${data.name} Service`} 
+                />
+              </div>
             </div>
           </div>
           

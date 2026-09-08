@@ -1,12 +1,6 @@
-import React from 'react';
+import type { PolicyData } from '@/data/policies';
 
-export interface PolicyData {
-  title: string;
-  lastUpdated: string;
-  content: React.ReactNode;
-}
-
-export default function PolicyPage({ data }: { data: PolicyData }) {
+export default function PolicyView({ data }: { data: PolicyData }) {
   return (
     <div className="pt-spacing-2xl pb-spacing-3xl bg-surface">
       <div className="max-w-3xl mx-auto px-gutter-mobile lg:px-gutter-desktop">

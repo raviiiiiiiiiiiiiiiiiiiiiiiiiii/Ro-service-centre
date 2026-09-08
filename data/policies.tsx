@@ -1,4 +1,10 @@
-import { PolicyData } from '../pages/PolicyPage';
+import type React from 'react';
+
+export interface PolicyData {
+  title: string;
+  lastUpdated: string;
+  content: React.ReactNode;
+}
 
 export const policyData: Record<string, PolicyData> = {
   'privacy-policy': {
