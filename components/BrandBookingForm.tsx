@@ -38,7 +38,7 @@ export default function BrandBookingForm({ brandName, phone = '08050291180' }: B
   };
 
   return (
-    <div className="w-full max-w-xl mx-auto px-4" id="appointment-form">
+    <div className="w-full max-w-xl mx-auto px-4 scroll-mt-24 sm:scroll-mt-28" id="appointment-form">
       <div className="bg-white border border-gray-200 shadow-md rounded-md p-6 sm:p-8">
         <h3 className="text-[#1a62d6] text-2xl font-normal text-center mb-6 tracking-tight">
           Book Appointment Now

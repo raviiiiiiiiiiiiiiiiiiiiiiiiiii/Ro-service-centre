@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Phone, Clock } from 'lucide-react';
+import { Phone, Clock, Calendar } from 'lucide-react';
 import type { BrandData } from '@/data/brands';
 import BrandHeader from '@/components/BrandHeader';
 import BrandHeroPurifier from '@/components/BrandHeroPurifier';
@@ -23,8 +23,20 @@ export default function BrandView({ data }: BrandViewProps) {
   const city = 'BENGALURU';
   const state = 'Karnataka';
 
+  const scrollToLeadForm = (e?: React.MouseEvent) => {
+    if (e) e.preventDefault();
+    const formElement = document.getElementById('appointment-form');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const firstInput = formElement.querySelector('input') as HTMLInputElement | null;
+      if (firstInput) {
+        setTimeout(() => firstInput.focus(), 500);
+      }
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-white text-gray-800 font-sans selection:bg-[#1859c2] selection:text-white pb-20 sm:pb-24">
+    <div className="min-h-screen bg-white text-gray-800 font-sans selection:bg-[#1859c2] selection:text-white pb-24 sm:pb-28">
       {/* 1. Header with Logo, Location, Toll Free, and Navigation Bar */}
       <BrandHeader
         phone={phone}
@@ -187,7 +199,7 @@ export default function BrandView({ data }: BrandViewProps) {
       />
 
       {/* Floating 'Click To Call' Round Rectangular Pill */}
-      <div className="fixed bottom-16 sm:bottom-18 right-4 sm:right-6 z-50">
+      <div className="fixed bottom-20 sm:bottom-22 right-3 sm:right-6 z-50">
         <a
           href={`tel:${phone}`}
           className="inline-flex items-center gap-2 sm:gap-2.5 bg-white hover:bg-slate-50 border-2 border-[#0077c8] text-[#004e9a] rounded-full px-3.5 py-1.5 sm:px-4 sm:py-2 shadow-[0_8px_25px_rgba(0,0,0,0.18)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.25)] transition-all font-bold group active:scale-95"
@@ -207,15 +219,32 @@ export default function BrandView({ data }: BrandViewProps) {
         </a>
       </div>
 
-      {/* Sticky Footer: Full-Width Call Now Line */}
-      <div className="fixed bottom-0 inset-x-0 z-40 bg-[#1859c2] hover:bg-[#1349a3] transition-colors py-2.5 sm:py-3 px-4 text-center shadow-[0_-4px_16px_rgba(0,0,0,0.25)] border-t border-white/20">
-        <a 
-          href={`tel:${phone}`} 
-          className="inline-flex items-center justify-center gap-2.5 text-white font-black text-base sm:text-xl md:text-2xl tracking-wide hover:underline active:scale-98 transition-transform"
-        >
-          <Phone size={20} className="fill-current" />
-          <span>Call Now : {phone}</span>
-        </a>
+      {/* Sticky Two-Button Footer: Call Us & Book Now */}
+      <div className="fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 py-2.5 sm:py-3 px-3 sm:px-6 shadow-[0_-4px_20px_rgba(0,0,0,0.18)]">
+        <div className="max-w-xl mx-auto grid grid-cols-2 gap-2.5 sm:gap-4">
+          {/* Call Us Button - Dials phone */}
+          <a
+            href={`tel:${phone}`}
+            id="sticky-call-us-btn"
+            className="inline-flex items-center justify-center gap-2 sm:gap-2.5 py-3 sm:py-3.5 px-3 sm:px-5 bg-[#1859c2] hover:bg-[#12489c] text-white rounded-lg sm:rounded-xl font-black text-sm sm:text-base md:text-lg tracking-wide shadow-md active:scale-95 transition-all text-center group"
+            title={`Call us at ${phone}`}
+          >
+            <Phone size={18} className="fill-current animate-pulse flex-shrink-0" />
+            <span className="truncate">Call Us</span>
+          </a>
+
+          {/* Book Now Button - Scrolls to lead form */}
+          <button
+            type="button"
+            id="sticky-book-now-btn"
+            onClick={scrollToLeadForm}
+            className="inline-flex items-center justify-center gap-2 sm:gap-2.5 py-3 sm:py-3.5 px-3 sm:px-5 bg-[#d9383a] hover:bg-[#bf2628] text-white rounded-lg sm:rounded-xl font-black text-sm sm:text-base md:text-lg tracking-wide shadow-md active:scale-95 transition-all text-center cursor-pointer group"
+            title="Book Service Appointment"
+          >
+            <Calendar size={18} className="flex-shrink-0" />
+            <span className="truncate">Book Now</span>
+          </button>
+        </div>
       </div>
     </div>
   );
