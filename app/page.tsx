@@ -10,7 +10,7 @@ import WaterSplashIllustration from '@/components/WaterSplashIllustration';
 export default function HomePage() {
   const brandName = 'Ro';
   const phone = '08050291180';
-  const email = 'authorizedservicecenter111@gmail.com';
+  const email = 'Contect@Roservicecentreonline24x7.in';
   const city = 'BENGALURU';
   const state = 'Karnataka';
 

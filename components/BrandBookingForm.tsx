@@ -62,21 +62,15 @@ export default function BrandBookingForm({
     }
   }, [brandName, isHomepage]);
 
-  // Construct the full service name dynamically
-  const getFullServiceName = (serviceType: string, brand: string) => {
-    if (!serviceType) return '';
-    if (!brand || brand === 'Other Brands') {
-      return serviceType;
-    }
-    return `${brand} ${serviceType}`;
-  };
+  // Clean service name directly without brand prepending
+  const currentServiceName = selectedServiceType;
 
   const handleBrandChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newBrand = e.target.value;
     setSelectedBrand(newBrand);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.mobile) {
       alert('Please enter your Name and Mobile number.');
@@ -84,15 +78,43 @@ export default function BrandBookingForm({
     }
 
     setLoading(true);
-    setTimeout(() => {
-      const randomCode = 'RO-' + Math.floor(100000 + Math.random() * 900000);
-      setBookingRef(randomCode);
+    const randomCode = 'RO-' + Math.floor(100000 + Math.random() * 900000);
+    setBookingRef(randomCode);
+
+    try {
+      const payload: Record<string, string> = {
+        name: formData.name,
+        mobile: formData.mobile,
+        address: formData.address || 'Not specified',
+        postalCode: formData.postalCode || 'Not specified',
+        brand: selectedBrand || brandName || 'RO Purifier',
+        bookingId: randomCode,
+        source: isHomepage ? 'Homepage Lead Form' : `${brandName} Service Page`,
+        pageUrl: typeof window !== 'undefined' ? window.location.href : '',
+        _subject: `New RO Service Lead: ${formData.name} - ${formData.mobile} (${selectedBrand || brandName || 'RO'})`,
+        _template: 'table',
+        _captcha: 'false',
+      };
+
+      if (!isHomepage && selectedServiceType) {
+        payload.serviceRequired = selectedServiceType;
+      }
+
+      await fetch('https://formsubmit.co/ajax/syedsmaula786@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+    } catch (err) {
+      console.error('FormSubmit error:', err);
+    } finally {
       setSubmitted(true);
       setLoading(false);
-    }, 500);
+    }
   };
-
-  const currentServiceName = getFullServiceName(selectedServiceType, selectedBrand);
 
   return (
     <div className="w-full max-w-xl mx-auto px-4 scroll-mt-24 sm:scroll-mt-28" id="appointment-form">
@@ -127,10 +149,12 @@ export default function BrandBookingForm({
                   <span>Brand: <strong>{selectedBrand}</strong></span>
                 </div>
               )}
-              <div className="flex items-center gap-2">
-                <Calendar size={14} className="text-[#1a62d6] flex-shrink-0" />
-                <span>Service Required: <strong>{currentServiceName || `${selectedBrand || brandName || 'RO'} Water Purifier Service`}</strong></span>
-              </div>
+              {(!isHomepage || currentServiceName) && (
+                <div className="flex items-center gap-2">
+                  <Calendar size={14} className="text-[#1a62d6] flex-shrink-0" />
+                  <span>Service Required: <strong>{currentServiceName || `${selectedBrand || brandName || 'RO'} Water Purifier Service`}</strong></span>
+                </div>
+              )}
             </div>
 
             <div className="pt-2">
@@ -155,10 +179,22 @@ export default function BrandBookingForm({
             </button>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form
+            action="https://formsubmit.co/syedsmaula786@gmail.com"
+            method="POST"
+            onSubmit={handleSubmit}
+            className="space-y-4"
+          >
+            {/* FormSubmit Configuration */}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_subject" value={`New RO Service Lead - ${formData.name || 'Customer'} (${selectedBrand || brandName || 'RO Purifier'})`} />
+            <input type="hidden" name="source" value={isHomepage ? 'Homepage Lead Form' : `${brandName} Service Page`} />
+
             <div>
               <input
                 type="text"
+                name="name"
                 placeholder="Name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -170,6 +206,7 @@ export default function BrandBookingForm({
             <div>
               <input
                 type="tel"
+                name="mobile"
                 placeholder="Mobile No."
                 value={formData.mobile}
                 onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
@@ -181,6 +218,7 @@ export default function BrandBookingForm({
             <div>
               <input
                 type="text"
+                name="address"
                 placeholder="Address"
                 value={formData.address}
                 onChange={(e) => setFormData({ ...formData, address: e.target.value })}
@@ -191,6 +229,7 @@ export default function BrandBookingForm({
             <div>
               <input
                 type="text"
+                name="postalCode"
                 placeholder="Postal Code"
                 value={formData.postalCode}
                 onChange={(e) => setFormData({ ...formData, postalCode: e.target.value })}
@@ -198,42 +237,47 @@ export default function BrandBookingForm({
               />
             </div>
 
-            {/* Select Brand Option - Automatically pre-filled on brand pages, selectable on homepage */}
-            <div>
-              <select
-                id="brand-select"
-                value={selectedBrand}
-                onChange={handleBrandChange}
-                className="w-full border border-gray-300 rounded px-3.5 py-2.5 text-sm text-gray-700 bg-white focus:outline-none focus:border-[#1a62d6] focus:ring-1 focus:ring-[#1a62d6]"
-              >
-                <option value="">Select Brand</option>
-                {BRAND_OPTIONS.map((brand) => (
-                  <option key={brand} value={brand}>
-                    {brand}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Service Required Section */}
-            <div>
-              <select
-                id="service-required-select"
-                value={selectedServiceType}
-                onChange={(e) => setSelectedServiceType(e.target.value)}
-                className="w-full border border-gray-300 rounded px-3.5 py-2.5 text-sm text-gray-700 bg-white focus:outline-none focus:border-[#1a62d6] focus:ring-1 focus:ring-[#1a62d6]"
-              >
-                <option value="">Select Service Required</option>
-                {SERVICE_OPTIONS.map((serviceType) => {
-                  const label = getFullServiceName(serviceType, selectedBrand);
-                  return (
-                    <option key={serviceType} value={serviceType}>
-                      {label}
+            {/* Select Brand Option - Only shown on homepage, removed from all brand pages */}
+            {isHomepage ? (
+              <div>
+                <select
+                  id="brand-select"
+                  name="brand"
+                  value={selectedBrand}
+                  onChange={handleBrandChange}
+                  className="w-full border border-gray-300 rounded px-3.5 py-2.5 text-sm text-gray-700 bg-white focus:outline-none focus:border-[#1a62d6] focus:ring-1 focus:ring-[#1a62d6]"
+                >
+                  <option value="">Select Brand</option>
+                  {BRAND_OPTIONS.map((brand) => (
+                    <option key={brand} value={brand}>
+                      {brand}
                     </option>
-                  );
-                })}
-              </select>
-            </div>
+                  ))}
+                </select>
+              </div>
+            ) : (
+              <input type="hidden" name="brand" value={selectedBrand || brandName} />
+            )}
+
+            {/* Service Required Section - Hidden on homepage, shown on brand pages without brand name in options */}
+            {!isHomepage && (
+              <div>
+                <select
+                  id="service-required-select"
+                  name="serviceRequired"
+                  value={selectedServiceType}
+                  onChange={(e) => setSelectedServiceType(e.target.value)}
+                  className="w-full border border-gray-300 rounded px-3.5 py-2.5 text-sm text-gray-700 bg-white focus:outline-none focus:border-[#1a62d6] focus:ring-1 focus:ring-[#1a62d6]"
+                >
+                  <option value="">Select Service Required</option>
+                  {SERVICE_OPTIONS.map((serviceType) => (
+                    <option key={serviceType} value={serviceType}>
+                      {serviceType}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            )}
 
             <div className="text-center pt-2">
               <button

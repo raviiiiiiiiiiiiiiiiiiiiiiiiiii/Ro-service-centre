@@ -32,7 +32,7 @@ export const policyData: Record<string, PolicyData> = {
         <p>Our website may use cookies to enhance user experience and analyze traffic. We may use third-party analytics tools to understand website usage, but these tools process data anonymously.</p>
         
         <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at contact@roservice24x7.in or call 08050291180.</p>
+        <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:Contect@Roservicecentreonline24x7.in" className="text-[#1a62d6] underline">Contect@Roservicecentreonline24x7.in</a> or call 08050291180.</p>
       </>
     )
   },
@@ -54,6 +54,9 @@ export const policyData: Record<string, PolicyData> = {
         
         <h2>Limitations of Service</h2>
         <p>We reserve the right to refuse service if the work environment is deemed unsafe or if the water purifier is beyond repair. We are not liable for pre-existing damages to the appliance or plumbing.</p>
+
+        <h2>Contact & Support</h2>
+        <p>For questions or service inquiries regarding these terms, please contact us at <a href="mailto:Contect@Roservicecentreonline24x7.in" className="text-[#1a62d6] underline">Contect@Roservicecentreonline24x7.in</a> or call 08050291180.</p>
       </>
     )
   },
@@ -65,7 +68,7 @@ export const policyData: Record<string, PolicyData> = {
         <p>This Cancellation and Refund Policy outlines the terms regarding the cancellation of service bookings and refund eligibility at RO Service Centre Online.</p>
         
         <h2>Service Cancellation</h2>
-        <p>You may cancel or reschedule your service booking at any time before the technician is dispatched to your location without any cancellation fee. Please call us at 08050291180 to cancel.</p>
+        <p>You may cancel or reschedule your service booking at any time before the technician is dispatched to your location without any cancellation fee. Please call us at 08050291180 or email <a href="mailto:Contect@Roservicecentreonline24x7.in" className="text-[#1a62d6] underline">Contect@Roservicecentreonline24x7.in</a> to cancel.</p>
         
         <h2>Technician Visits</h2>
         <p>If the technician has arrived at your location and you choose to cancel the repair after diagnosis, a nominal inspection/visiting fee will be applicable for their time and travel.</p>
@@ -91,6 +94,9 @@ export const policyData: Record<string, PolicyData> = {
         
         <h2>Service Limitations</h2>
         <p>While we strive to provide accurate and up-to-date information, we make no warranties, expressed or implied, regarding the completeness, accuracy, reliability, or availability of the website or the information, products, services, or related graphics contained on the website.</p>
+
+        <h2>Contact & Feedback</h2>
+        <p>For any questions or feedback regarding this disclaimer, please contact us at <a href="mailto:Contect@Roservicecentreonline24x7.in" className="text-[#1a62d6] underline">Contect@Roservicecentreonline24x7.in</a>.</p>
       </>
     )
   },
@@ -109,6 +115,9 @@ export const policyData: Record<string, PolicyData> = {
         
         <h2>Cookie Management</h2>
         <p>You can set your browser not to accept cookies, and you can remove cookies from your browser at any time. However, in a few cases, some of our website features may not function as a result.</p>
+
+        <h2>Contact</h2>
+        <p>For any questions about our Cookie Policy, please contact <a href="mailto:Contect@Roservicecentreonline24x7.in" className="text-[#1a62d6] underline">Contect@Roservicecentreonline24x7.in</a>.</p>
       </>
     )
   }

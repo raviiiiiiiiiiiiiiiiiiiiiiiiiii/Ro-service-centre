@@ -12,7 +12,7 @@ interface BrandFooterProps {
 
 export default function BrandFooter({
   addressCity = 'BENGALURU',
-  email = 'authorizedservicecenter111@gmail.com',
+  email = 'Contect@Roservicecentreonline24x7.in',
   phone = '08050291180'
 }: BrandFooterProps) {
   return (

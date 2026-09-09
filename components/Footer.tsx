@@ -59,7 +59,7 @@ export function Footer() {
               </p>
               <p className="flex items-center gap-spacing-xs">
                 <Mail size={18} className="text-primary shrink-0" />
-                <a className="hover:text-white transition-colors" href="mailto:contact@roservice24x7.in">contact@roservice24x7.in</a>
+                <a className="hover:text-white transition-colors" href="mailto:Contect@Roservicecentreonline24x7.in">Contect@Roservicecentreonline24x7.in</a>
               </p>
               <p className="flex items-center gap-spacing-xs">
                 <Clock size={18} className="text-primary shrink-0" />
