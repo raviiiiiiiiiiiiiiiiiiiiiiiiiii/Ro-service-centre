@@ -41,18 +41,18 @@ export default function BrandView({ data }: BrandViewProps) {
         locationState={state}
       />
 
-      {/* 2. Hero Purifier Graphic (Clean image without overlay card) */}
+      {/* 2. Hero Purifier Graphic (Natural aspect ratio, uncropped as-is) */}
       <div className="w-full bg-[#f8fafc] pt-4 pb-2">
         <div className="max-w-3xl mx-auto px-2 sm:px-4" id="purifier-gallery">
           <a
             href={`tel:${phone}`}
-            className="block relative rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow group active:scale-[0.99] border border-gray-200 bg-white"
+            className="block relative rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-gray-200 bg-white"
             title={`Call ${brandName} RO Water Purifier Service at ${phone}`}
           >
             <img
               src={data.heroImage}
               alt={`${brandName} RO Water Purifier Service Center Bangalore - Doorstep Technician`}
-              className="w-full h-[280px] sm:h-[380px] md:h-[420px] object-cover object-top mx-auto transition-transform duration-300 group-hover:scale-[1.01]"
+              className="w-full h-auto block mx-auto"
             />
           </a>
         </div>
@@ -76,17 +76,17 @@ export default function BrandView({ data }: BrandViewProps) {
           </div>
         </section>
 
-        {/* 4. Mid-Page Bring Home Banner (Clean image without overlay card) */}
+        {/* 4. Mid-Page Bring Home Banner (Natural aspect ratio, uncropped as-is) */}
         <div className="w-full max-w-4xl mx-auto my-6 sm:my-8 px-2 sm:px-4">
           <a
             href={`tel:${phone}`}
-            className="block relative rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow group active:scale-[0.99] border border-gray-200 bg-white"
+            className="block relative rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-gray-200 bg-white"
             title={`Call ${brandName} RO Water Purifier Service at ${phone}`}
           >
             <img
               src={data.secondImage || data.heroImage}
               alt={`100% Pure & Safe Drinking Water - ${brandName} RO Water Purifier Service`}
-              className="w-full h-[220px] sm:h-[300px] md:h-[340px] object-cover mx-auto transition-transform duration-300 group-hover:scale-[1.01]"
+              className="w-full h-auto block mx-auto"
             />
           </a>
         </div>
