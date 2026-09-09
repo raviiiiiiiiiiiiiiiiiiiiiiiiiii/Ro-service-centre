@@ -41,7 +41,7 @@ export default function BrandView({ data }: BrandViewProps) {
         locationState={state}
       />
 
-      {/* 2. Hero Purifier Graphic (No brand logo box, matching homepage layout) */}
+      {/* 2. Hero Purifier Graphic (Clean image without overlay card) */}
       <div className="w-full bg-[#f8fafc] pt-4 pb-2">
         <div className="max-w-3xl mx-auto px-2 sm:px-4" id="purifier-gallery">
           <a
@@ -54,14 +54,6 @@ export default function BrandView({ data }: BrandViewProps) {
               alt={`${brandName} RO Water Purifier Service Center Bangalore - Doorstep Technician`}
               className="w-full h-[280px] sm:h-[380px] md:h-[420px] object-cover object-top mx-auto transition-transform duration-300 group-hover:scale-[1.01]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-transparent pointer-events-none"></div>
-            <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 bg-white/95 backdrop-blur-sm px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg shadow-sm border border-gray-200">
-              <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span className="text-xs sm:text-sm font-semibold text-gray-900">Doorstep {brandName} RO Repair & Service in 60-90 Mins</span>
-              </div>
-              <span className="text-xs sm:text-sm font-bold text-[#1859c2]">Call: {phone}</span>
-            </div>
           </a>
         </div>
       </div>
@@ -84,7 +76,7 @@ export default function BrandView({ data }: BrandViewProps) {
           </div>
         </section>
 
-        {/* 4. Mid-Page Bring Home Banner matching homepage layout */}
+        {/* 4. Mid-Page Bring Home Banner (Clean image without overlay card) */}
         <div className="w-full max-w-4xl mx-auto my-6 sm:my-8 px-2 sm:px-4">
           <a
             href={`tel:${phone}`}
@@ -96,14 +88,6 @@ export default function BrandView({ data }: BrandViewProps) {
               alt={`100% Pure & Safe Drinking Water - ${brandName} RO Water Purifier Service`}
               className="w-full h-[220px] sm:h-[300px] md:h-[340px] object-cover mx-auto transition-transform duration-300 group-hover:scale-[1.01]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-transparent pointer-events-none"></div>
-            <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 bg-white/95 backdrop-blur-sm px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg shadow-sm border border-gray-200">
-              <div>
-                <p className="text-xs text-gray-500 font-medium">100% Pure & Safe Drinking Water</p>
-                <p className="text-xs sm:text-sm font-bold text-gray-900">Bring Home Purity & Health For Your Loved Ones</p>
-              </div>
-              <span className="text-xs sm:text-sm font-bold text-[#1859c2]">Instant Booking: {phone}</span>
-            </div>
           </a>
         </div>
 
