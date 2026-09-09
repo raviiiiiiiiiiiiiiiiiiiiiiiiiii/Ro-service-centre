@@ -4,7 +4,6 @@ import React from 'react';
 import { Phone, Clock, Calendar } from 'lucide-react';
 import type { BrandData } from '@/data/brands';
 import BrandHeader from '@/components/BrandHeader';
-import BrandTrustStrip from '@/components/BrandTrustStrip';
 import BrandBookingForm from '@/components/BrandBookingForm';
 import BrandFooter from '@/components/BrandFooter';
 import WaterSplashIllustration from '@/components/WaterSplashIllustration';
@@ -41,9 +40,6 @@ export default function BrandView({ data }: BrandViewProps) {
         locationCity="Bengaluru"
         locationState={state}
       />
-
-      {/* Trust Highlights Strip matching reference design: 1000+ Happy Customers | 4.8 Rated Service | Expert RO Technicians */}
-      <BrandTrustStrip />
 
       {/* 2. Hero Purifier Graphic (No brand logo box, matching homepage layout) */}
       <div className="w-full bg-[#f8fafc] pt-4 pb-2">

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import BrandTrustStrip from '@/components/BrandTrustStrip';
 
 interface BrandHeaderProps {
   phone?: string;
@@ -28,7 +29,7 @@ export default function BrandHeader({
         </a>
       </div>
 
-      {/* 2. Image Section: Authorised Service Center Water Purifier */}
+      {/* 2. Image Section: Header Banner */}
       <div className="w-full bg-white py-3 sm:py-4 px-4 flex items-center justify-center border-b border-gray-100">
         <Link
           href="/"
@@ -36,7 +37,7 @@ export default function BrandHeader({
           title="RO Service Centre Online"
         >
           <img
-            src="https://res.cloudinary.com/dieq3fjuv/image/upload/v1788889605/Internet_20260908_231300_1_ivjnwr.png"
+            src="https://res.cloudinary.com/dieq3fjuv/image/upload/v1788967586/IMG-20260908-WA0018_1_vlpnkp.jpg"
             alt="Authorised Service Center - Water Purifier"
             className="h-16 sm:h-20 md:h-24 w-auto max-w-[90vw] object-contain mx-auto"
             onError={(e) => {
@@ -46,7 +47,10 @@ export default function BrandHeader({
         </Link>
       </div>
 
-      {/* 3. Dark Blue Bar with Red/Coral Hamburger Menu Button & Dropdown */}
+      {/* 3. Trust Highlights Section: Above the hamburger icon, just below the header image */}
+      <BrandTrustStrip />
+
+      {/* 4. Dark Blue Bar with Red/Coral Hamburger Menu Button & Dropdown */}
       <div className="w-full bg-[#16386d]">
         <div className="max-w-4xl mx-auto px-3 sm:px-4 py-2 sm:py-2.5 flex items-center justify-end">
           {/* Red/Coral Rounded Square Hamburger Button matching screenshot */}
