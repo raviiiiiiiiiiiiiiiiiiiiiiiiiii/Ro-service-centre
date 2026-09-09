@@ -11,7 +11,7 @@ interface BrandFooterProps {
 }
 
 export default function BrandFooter({
-  addressCity = 'BENGALURU',
+  addressCity = 'No. 97, Neeladri Nagar, Electronics City Phase 1 Extension, Bengaluru, Karnataka',
   email = 'Contect@Roservicecentreonline24x7.in',
   phone = '08050291180'
 }: BrandFooterProps) {
@@ -28,7 +28,7 @@ export default function BrandFooter({
             <div className="text-gray-300 text-[11px] font-semibold uppercase tracking-wider mb-0.5">
               Address :
             </div>
-            <div className="text-white text-sm font-bold tracking-wide">
+            <div className="text-white text-xs sm:text-[13px] font-medium tracking-wide leading-relaxed">
               {addressCity}
             </div>
           </div>

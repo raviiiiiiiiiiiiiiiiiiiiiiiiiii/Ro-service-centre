@@ -11,6 +11,7 @@ export default function HomePage() {
   const brandName = 'Ro';
   const phone = '08050291180';
   const email = 'Contect@Roservicecentreonline24x7.in';
+  const address = 'No. 97, Neeladri Nagar, Electronics City Phase 1 Extension, Bengaluru, Karnataka';
   const city = 'BENGALURU';
   const state = 'Karnataka';
 
@@ -221,7 +222,7 @@ export default function HomePage() {
 
       {/* 11. Dark Navy 3-Box Footer with Disclaimer */}
       <BrandFooter
-        addressCity={city}
+        addressCity={address}
         email={email}
         phone={phone}
       />

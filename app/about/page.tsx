@@ -22,7 +22,7 @@ export default function AboutPage() {
               Dedicated to Pure & Safe Water in Bangalore
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant mb-spacing-lg leading-relaxed">
-              Officially registered MSME Enterprise (UDYAM-KR-03-0561611). We are a premier multi-brand water purifier service network dedicated to ensuring every home and business in Bangalore has continuous access to clean, healthy drinking water.
+              Officially registered MSME Enterprise (UDYAM-KR-03-0561611) located at No. 97, Neeladri Nagar, Electronics City Phase 1 Extension, Bengaluru, Karnataka. We are a premier multi-brand water purifier service network dedicated to ensuring every home and business in Bangalore has continuous access to clean, healthy drinking water.
             </p>
             <div className="flex flex-wrap items-center gap-spacing-md">
               <a className="inline-flex items-center gap-spacing-xs px-spacing-xl py-spacing-sm rounded-full bg-primary text-on-primary font-label-lg text-label-lg shadow-lg hover:bg-secondary transition-all" href="#quick-booking">

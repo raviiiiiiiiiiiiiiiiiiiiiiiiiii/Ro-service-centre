@@ -32,7 +32,7 @@ export const policyData: Record<string, PolicyData> = {
         <p>Our website may use cookies to enhance user experience and analyze traffic. We may use third-party analytics tools to understand website usage, but these tools process data anonymously.</p>
         
         <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:Contect@Roservicecentreonline24x7.in" className="text-[#1a62d6] underline">Contect@Roservicecentreonline24x7.in</a> or call 08050291180.</p>
+        <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:Contect@Roservicecentreonline24x7.in" className="text-[#1a62d6] underline">Contect@Roservicecentreonline24x7.in</a>, call 08050291180, or visit our office at No. 97, Neeladri Nagar, Electronics City Phase 1 Extension, Bengaluru, Karnataka.</p>
       </>
     )
   },
@@ -56,7 +56,7 @@ export const policyData: Record<string, PolicyData> = {
         <p>We reserve the right to refuse service if the work environment is deemed unsafe or if the water purifier is beyond repair. We are not liable for pre-existing damages to the appliance or plumbing.</p>
 
         <h2>Contact & Support</h2>
-        <p>For questions or service inquiries regarding these terms, please contact us at <a href="mailto:Contect@Roservicecentreonline24x7.in" className="text-[#1a62d6] underline">Contect@Roservicecentreonline24x7.in</a> or call 08050291180.</p>
+        <p>For questions or service inquiries regarding these terms, please contact us at <a href="mailto:Contect@Roservicecentreonline24x7.in" className="text-[#1a62d6] underline">Contect@Roservicecentreonline24x7.in</a>, call 08050291180, or write to No. 97, Neeladri Nagar, Electronics City Phase 1 Extension, Bengaluru, Karnataka.</p>
       </>
     )
   },
@@ -76,6 +76,9 @@ export const policyData: Record<string, PolicyData> = {
         <h2>Refund Eligibility</h2>
         <p>We do not collect advance payments for standard repair services. Payment is due upon completion of the service and your satisfaction. Therefore, refunds are generally not applicable for labor charges.</p>
         <p>If a spare part replaced by us fails within its specified warranty period, we will replace the part free of charge. No cash refunds will be provided for installed spare parts or filters.</p>
+
+        <h2>Registered Address</h2>
+        <p>RO Service Centre Online: No. 97, Neeladri Nagar, Electronics City Phase 1 Extension, Bengaluru, Karnataka.</p>
       </>
     )
   },
@@ -96,7 +99,7 @@ export const policyData: Record<string, PolicyData> = {
         <p>While we strive to provide accurate and up-to-date information, we make no warranties, expressed or implied, regarding the completeness, accuracy, reliability, or availability of the website or the information, products, services, or related graphics contained on the website.</p>
 
         <h2>Contact & Feedback</h2>
-        <p>For any questions or feedback regarding this disclaimer, please contact us at <a href="mailto:Contect@Roservicecentreonline24x7.in" className="text-[#1a62d6] underline">Contect@Roservicecentreonline24x7.in</a>.</p>
+        <p>For any questions or feedback regarding this disclaimer, please contact us at <a href="mailto:Contect@Roservicecentreonline24x7.in" className="text-[#1a62d6] underline">Contect@Roservicecentreonline24x7.in</a> or visit No. 97, Neeladri Nagar, Electronics City Phase 1 Extension, Bengaluru, Karnataka.</p>
       </>
     )
   },
@@ -117,7 +120,7 @@ export const policyData: Record<string, PolicyData> = {
         <p>You can set your browser not to accept cookies, and you can remove cookies from your browser at any time. However, in a few cases, some of our website features may not function as a result.</p>
 
         <h2>Contact</h2>
-        <p>For any questions about our Cookie Policy, please contact <a href="mailto:Contect@Roservicecentreonline24x7.in" className="text-[#1a62d6] underline">Contect@Roservicecentreonline24x7.in</a>.</p>
+        <p>For any questions about our Cookie Policy, please contact <a href="mailto:Contect@Roservicecentreonline24x7.in" className="text-[#1a62d6] underline">Contect@Roservicecentreonline24x7.in</a> or write to No. 97, Neeladri Nagar, Electronics City Phase 1 Extension, Bengaluru, Karnataka.</p>
       </>
     )
   }

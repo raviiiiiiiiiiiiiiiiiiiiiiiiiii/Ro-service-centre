@@ -18,6 +18,9 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: 'RO Service Centre Online',
   description: 'Professional RO repair, service and installation at your doorstep.',
+  icons: {
+    icon: '/icon.svg',
+  },
 };
 
 export default function RootLayout({

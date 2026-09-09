@@ -51,7 +51,7 @@ export function Footer() {
             <div className="space-y-spacing-xs text-body-sm font-body-sm text-white/70">
               <p className="flex items-start gap-spacing-xs">
                 <MapPin size={18} className="text-primary shrink-0 mt-0.5" />
-                <span>Bangalore, Karnataka, India</span>
+                <span>No. 97, Neeladri Nagar, Electronics City Phase 1 Extension, Bengaluru, Karnataka</span>
               </p>
               <p className="flex items-center gap-spacing-xs">
                 <Phone size={18} className="text-primary shrink-0" />
