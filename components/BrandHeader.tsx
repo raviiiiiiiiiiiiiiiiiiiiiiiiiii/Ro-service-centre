@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import BrandTrustStrip from '@/components/BrandTrustStrip';
 
 interface BrandHeaderProps {
   phone?: string;
@@ -47,10 +46,7 @@ export default function BrandHeader({
         </Link>
       </div>
 
-      {/* 3. Trust Highlights Section: Above the hamburger icon, just below the header image */}
-      <BrandTrustStrip />
-
-      {/* 4. Dark Blue Bar with Red/Coral Hamburger Menu Button & Dropdown */}
+      {/* 3. Dark Blue Bar with Red/Coral Hamburger Menu Button & Dropdown */}
       <div className="w-full bg-[#16386d]">
         <div className="max-w-4xl mx-auto px-3 sm:px-4 py-2 sm:py-2.5 flex items-center justify-end">
           {/* Red/Coral Rounded Square Hamburger Button matching screenshot */}
