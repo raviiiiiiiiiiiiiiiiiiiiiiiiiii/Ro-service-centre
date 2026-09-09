@@ -1,25 +1,80 @@
 'use client';
 
-import React, { useState } from 'react';
-import { CheckCircle2, Phone, Calendar, Clock } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { CheckCircle2, Phone, Calendar, Clock, Wrench } from 'lucide-react';
+
+export const BRAND_OPTIONS = [
+  'Blue Star',
+  'Whirlpool',
+  'Kent',
+  'Aquaguard',
+  'Pureit',
+  'AO Smith',
+  'LG',
+  'Havells',
+  'Zero B',
+  'Aqua Pearl',
+  'V-Guard',
+  'Livpure',
+  'Other Brands',
+];
+
+export const SERVICE_OPTIONS = [
+  'Water Purifier Service',
+  'Water Purifier Repair',
+  'Water Purifier Filter Replacement',
+  'Water Purifier AMC',
+];
 
 interface BrandBookingFormProps {
-  brandName: string;
+  brandName?: string;
   phone?: string;
+  isHomepage?: boolean;
 }
 
-export default function BrandBookingForm({ brandName, phone = '08050291180' }: BrandBookingFormProps) {
+export default function BrandBookingForm({ 
+  brandName = 'RO', 
+  phone = '08050291180',
+  isHomepage = false,
+}: BrandBookingFormProps) {
+  // Determine initial brand: on brand pages it fills automatically from brandName; on homepage it starts empty
+  const defaultBrand = !isHomepage && brandName && brandName !== 'RO' && brandName !== 'Multi-Brand'
+    ? brandName
+    : '';
+
   const [formData, setFormData] = useState({
     name: '',
     mobile: '',
     address: '',
     postalCode: '',
-    product: '',
   });
 
+  const [selectedBrand, setSelectedBrand] = useState<string>(defaultBrand);
+  const [selectedServiceType, setSelectedServiceType] = useState<string>('');
   const [submitted, setSubmitted] = useState(false);
   const [bookingRef, setBookingRef] = useState('');
   const [loading, setLoading] = useState(false);
+
+  // Sync selectedBrand if brandName prop changes
+  useEffect(() => {
+    if (!isHomepage && brandName && brandName !== 'RO' && brandName !== 'Multi-Brand') {
+      setSelectedBrand(brandName);
+    }
+  }, [brandName, isHomepage]);
+
+  // Construct the full service name dynamically
+  const getFullServiceName = (serviceType: string, brand: string) => {
+    if (!serviceType) return '';
+    if (!brand || brand === 'Other Brands') {
+      return serviceType;
+    }
+    return `${brand} ${serviceType}`;
+  };
+
+  const handleBrandChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newBrand = e.target.value;
+    setSelectedBrand(newBrand);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,6 +91,8 @@ export default function BrandBookingForm({ brandName, phone = '08050291180' }: B
       setLoading(false);
     }, 500);
   };
+
+  const currentServiceName = getFullServiceName(selectedServiceType, selectedBrand);
 
   return (
     <div className="w-full max-w-xl mx-auto px-4 scroll-mt-24 sm:scroll-mt-28" id="appointment-form">
@@ -59,14 +116,20 @@ export default function BrandBookingForm({ brandName, phone = '08050291180' }: B
               </div>
             </div>
 
-            <div className="bg-gray-50 border border-gray-200 rounded p-4 text-left text-xs text-gray-700 space-y-1.5">
+            <div className="bg-gray-50 border border-gray-200 rounded p-4 text-left text-xs text-gray-700 space-y-2">
               <div className="flex items-center gap-2">
-                <Clock size={14} className="text-[#1a62d6]" />
+                <Clock size={14} className="text-[#1a62d6] flex-shrink-0" />
                 <span>Estimated Arrival: <strong>Within 60-90 minutes</strong></span>
               </div>
+              {selectedBrand && (
+                <div className="flex items-center gap-2">
+                  <Wrench size={14} className="text-[#1a62d6] flex-shrink-0" />
+                  <span>Brand: <strong>{selectedBrand}</strong></span>
+                </div>
+              )}
               <div className="flex items-center gap-2">
-                <Calendar size={14} className="text-[#1a62d6]" />
-                <span>Service Product: <strong>{formData.product || `${brandName} RO Purifier`}</strong></span>
+                <Calendar size={14} className="text-[#1a62d6] flex-shrink-0" />
+                <span>Service Required: <strong>{currentServiceName || `${selectedBrand || brandName || 'RO'} Water Purifier Service`}</strong></span>
               </div>
             </div>
 
@@ -82,9 +145,11 @@ export default function BrandBookingForm({ brandName, phone = '08050291180' }: B
             <button
               onClick={() => {
                 setSubmitted(false);
-                setFormData({ name: '', mobile: '', address: '', postalCode: '', product: '' });
+                setFormData({ name: '', mobile: '', address: '', postalCode: '' });
+                setSelectedServiceType('');
+                if (isHomepage) setSelectedBrand('');
               }}
-              className="text-xs text-blue-600 hover:underline block mx-auto mt-2"
+              className="text-xs text-blue-600 hover:underline block mx-auto mt-2 cursor-pointer"
             >
               Book Another Service
             </button>
@@ -133,32 +198,40 @@ export default function BrandBookingForm({ brandName, phone = '08050291180' }: B
               />
             </div>
 
+            {/* Select Brand Option - Automatically pre-filled on brand pages, selectable on homepage */}
             <div>
               <select
-                value={formData.product}
-                onChange={(e) => setFormData({ ...formData, product: e.target.value })}
+                id="brand-select"
+                value={selectedBrand}
+                onChange={handleBrandChange}
                 className="w-full border border-gray-300 rounded px-3.5 py-2.5 text-sm text-gray-700 bg-white focus:outline-none focus:border-[#1a62d6] focus:ring-1 focus:ring-[#1a62d6]"
               >
-                <option value="">Select Your Product</option>
-                {brandName === 'RO' || brandName === 'Multi-Brand' || brandName.toLowerCase().includes('multi') ? (
-                  <>
-                    <option value="Kent RO Purifier">Kent RO Purifier</option>
-                    <option value="Aquaguard / Eureka Forbes">Aquaguard / Eureka Forbes</option>
-                    <option value="Pureit RO Purifier">Pureit RO Purifier</option>
-                    <option value="AO Smith RO Purifier">AO Smith RO Purifier</option>
-                    <option value="LG PuriCare Purifier">LG PuriCare Purifier</option>
-                    <option value="Other RO Water Purifier">Other RO Water Purifier</option>
-                  </>
-                ) : (
-                  <>
-                    <option value={`${brandName} RO Water Purifier`}>{brandName} RO Water Purifier</option>
-                    <option value={`${brandName} UV / UF Purifier`}>{brandName} UV / UF Purifier</option>
-                    <option value={`${brandName} Geyser / Water Heater`}>{brandName} Geyser / Water Heater</option>
-                  </>
-                )}
-                <option value="Filter & Membrane Replacement">Filter & Membrane Replacement</option>
-                <option value="Annual Maintenance Contract (AMC)">Annual Maintenance Contract (AMC)</option>
-                <option value="General Troubleshooting & Repair">General Troubleshooting & Repair</option>
+                <option value="">Select Brand</option>
+                {BRAND_OPTIONS.map((brand) => (
+                  <option key={brand} value={brand}>
+                    {brand}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Service Required Section */}
+            <div>
+              <select
+                id="service-required-select"
+                value={selectedServiceType}
+                onChange={(e) => setSelectedServiceType(e.target.value)}
+                className="w-full border border-gray-300 rounded px-3.5 py-2.5 text-sm text-gray-700 bg-white focus:outline-none focus:border-[#1a62d6] focus:ring-1 focus:ring-[#1a62d6]"
+              >
+                <option value="">Select Service Required</option>
+                {SERVICE_OPTIONS.map((serviceType) => {
+                  const label = getFullServiceName(serviceType, selectedBrand);
+                  return (
+                    <option key={serviceType} value={serviceType}>
+                      {label}
+                    </option>
+                  );
+                })}
               </select>
             </div>
 
@@ -166,7 +239,7 @@ export default function BrandBookingForm({ brandName, phone = '08050291180' }: B
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-[#d9383a] hover:bg-[#c22e30] active:bg-[#b02527] text-white font-medium text-sm px-6 py-2 rounded transition-colors shadow-sm disabled:opacity-60"
+                className="bg-[#d9383a] hover:bg-[#c22e30] active:bg-[#b02527] text-white font-medium text-sm px-6 py-2 rounded transition-colors shadow-sm disabled:opacity-60 cursor-pointer"
               >
                 {loading ? 'Sending...' : 'Send Message'}
               </button>
@@ -177,3 +250,4 @@ export default function BrandBookingForm({ brandName, phone = '08050291180' }: B
     </div>
   );
 }
+

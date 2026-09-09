@@ -15,7 +15,7 @@ export const brandData: Record<string, BrandData> = {
     name: 'LG',
     title: 'Expert LG RO Repair & Service in Bangalore',
     description: 'Specialized doorstep service for LG PuriCare and other LG water purifiers. We provide genuine LG spare parts, membrane replacement, and complete AMC solutions across Bangalore.',
-    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788891175/file_00000000dba081faae368d55c826d5ae_4_lvnc1q.png',
+    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788965762/IMG-20260909-WA0008_evpgms.jpg',
     secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788893065/file_00000000aeb881fab74192e565686842_lq6dcm.png',
     applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194339_j4gjia.jpg',
     services: [
@@ -44,7 +44,7 @@ export const brandData: Record<string, BrandData> = {
     name: 'Aquaguard',
     title: 'Trusted Aquaguard Repair & Service in Bangalore',
     description: 'Expert servicing for Aquaguard Active Copper, Biotron, and other Eureka Forbes water purifiers. Doorstep repair, filter replacement, and AMC plans.',
-    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788891175/file_00000000dba081faae368d55c826d5ae_2_jbk0uw.png',
+    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788965761/IMG-20260909-WA0009_soljtz.jpg',
     secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788893065/file_000000006cf8820b8c51d3b4ca569f88_qtta1j.png',
     applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194328_pcq7uw.png',
     services: [
@@ -73,7 +73,7 @@ export const brandData: Record<string, BrandData> = {
     name: 'Kent',
     title: 'Reliable Kent RO Service in Bangalore',
     description: 'Professional repair and maintenance for Kent Grand, Prime, Supreme, Pearl, and Mineral RO models. Doorstep service in 60-90 minutes.',
-    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788891175/file_00000000dba081faae368d55c826d5ae_1_tat7ba.png',
+    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788965761/IMG-20260909-WA0012_ywdk3m.jpg',
     secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788893064/file_00000000a2dc820ba19c675f2156d6ac_kgtmyd.png',
     applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194243_himoc3.jpg',
     services: [
@@ -102,7 +102,7 @@ export const brandData: Record<string, BrandData> = {
     name: 'Pureit',
     title: 'Expert Pureit RO Service & GKK Replacement',
     description: 'Fast and reliable Pureit RO repair and Germkill Kit (GKK) replacement in Bangalore. Genuine spares and doorstep service.',
-    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788891175/file_00000000dba081faae368d55c826d5ae_uhitwj.png',
+    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788965761/IMG-20260909-WA0011_mmmbwu.jpg',
     secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788893064/file_00000000d7fc820b9a018cd17cb09d8c_hwjxqk.png',
     applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194420_cdv3yx.jpg',
     services: [
@@ -131,7 +131,7 @@ export const brandData: Record<string, BrandData> = {
     name: 'AO Smith',
     title: 'AO Smith RO Service & Repair in Bangalore',
     description: 'Specialized doorstep service for AO Smith water purifiers. Expert handling of MIN-TECH, SCM filters, Z8, Z9, and other premium models.',
-    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788891175/file_00000000dba081faae368d55c826d5ae_3_fdq1qh.png',
+    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788965762/IMG-20260909-WA0010_a1igyy.jpg',
     secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788893065/9e48f8d3086e064b01dc7098bedfb696e26146b54ce8058d6a87234e983b6dc2_ixhnla.png',
     applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194311_vmj5ot.jpg',
     services: [

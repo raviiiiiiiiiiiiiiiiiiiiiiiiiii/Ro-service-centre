@@ -214,7 +214,7 @@ export default function HomePage() {
 
           {/* Form Card */}
           <div className="relative z-10">
-            <BrandBookingForm brandName="RO" phone={phone} />
+            <BrandBookingForm brandName="RO" phone={phone} isHomepage={true} />
           </div>
         </section>
       </div>
