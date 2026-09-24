@@ -124,6 +124,8 @@ export default function HomePage() {
             <img
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk9HNCjhopbPFEMZ8DfINTyZFNwwELgCjTOHLRz3q6_Fw_BYuYY9R-_AcF1mt_yo1tlW2rAV3jtnStF0c6aA7i9LlgY4BDlcRnMk6mZdDFfHjqQFplXGpAMDGNIprVO3shf5Sjly778lt6cKrHpg5YER8v6RnNGaeWOULKJmswoohfz5JJgT4pwkwhXEYxnHwhAUS3W0pdnPakzFJHSrLnN-LjG74Iu7xFjoEctqnU-6kOWGYLKP7VxA"
               alt="RO Water Purifier Service Center Bangalore - Doorstep Technician"
+              width={768}
+              height={420}
               className="w-full h-[280px] sm:h-[380px] md:h-[420px] object-cover object-top mx-auto transition-transform duration-300 group-hover:scale-[1.01]"
               loading="eager"
               fetchPriority="high"
@@ -179,6 +181,8 @@ export default function HomePage() {
             <img
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuD84scjixxyU-5KYdES2jS_HsLZ9_C9KQxDqc4JgdczgASVd3t13MRcjBkM4pN2UgUcMUGsS6NiN9Wn-9NIk3NjRVefTecy0K6WDQQTSIatgwG6dlg8_ENlGtPVJh8NHxLZRNdVHgIgm9cXugaOpapTPiABq3bRYpDEYzmZXGp2Ghy7LjyUvzXfPszpb3TfpaYb6cXsS99KqOIsXDrFkw9C2t7O6vyNvf5a9MwWj9yCTCDD4nc-Xmckfw"
               alt="100% Pure & Safe Drinking Water - RO Water Purifier Service"
+              width={768}
+              height={340}
               className="w-full h-[220px] sm:h-[300px] md:h-[340px] object-cover mx-auto transition-transform duration-300 group-hover:scale-[1.01]"
               loading="lazy"
               decoding="async"

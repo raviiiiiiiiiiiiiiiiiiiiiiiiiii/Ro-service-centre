@@ -56,6 +56,8 @@ export default function BrandView({ data }: BrandViewProps) {
             <img
               src={data.heroImage}
               alt={`${brandName} RO Water Purifier Service Center Bangalore - Doorstep Technician`}
+              width={768}
+              height={432}
               className="w-full h-auto block mx-auto"
               loading="eager"
               fetchPriority="high"
@@ -102,6 +104,8 @@ export default function BrandView({ data }: BrandViewProps) {
             <img
               src={data.secondImage || data.heroImage}
               alt={`100% Pure & Safe Drinking Water - ${brandName} RO Water Purifier Service`}
+              width={768}
+              height={432}
               className="w-full h-auto block mx-auto"
               loading="lazy"
               decoding="async"

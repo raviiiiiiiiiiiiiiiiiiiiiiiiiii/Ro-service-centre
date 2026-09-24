@@ -44,6 +44,8 @@ export default function BrandHeader({
           <img
             src={logoImage}
             alt="Authorised Service Center - Water Purifier"
+            width={360}
+            height={84}
             className="h-16 sm:h-20 md:h-24 w-auto max-w-[90vw] object-contain mx-auto"
             loading="eager"
             fetchPriority="high"

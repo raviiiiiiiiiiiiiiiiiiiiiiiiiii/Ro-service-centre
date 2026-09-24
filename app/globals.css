@@ -182,10 +182,10 @@ nextjs-portal,
 
 @keyframes marquee-slide {
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
@@ -194,6 +194,9 @@ nextjs-portal,
   white-space: nowrap;
   animation: marquee-slide 28s linear infinite;
   will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .animate-marquee-slide:hover {
