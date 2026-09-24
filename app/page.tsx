@@ -136,30 +136,35 @@ export default function HomePage() {
             </div>
           </a>
         </div>
-
-        {/* Lead Form moved up into the hero section */}
-        <div className="max-w-3xl mx-auto px-2 sm:px-4 pt-4 sm:pt-6">
-          <BrandBookingForm brandName="RO" phone={phone} isHomepage={true} />
-        </div>
       </div>
 
       {/* Main Content Container */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 md:py-10 space-y-10">
         
-        {/* 3. Title and Introduction */}
-        <section className="text-center space-y-4">
+        {/* 3. Title */}
+        <section className="text-center space-y-2">
           <h1 className="text-gray-900 font-semibold text-2xl sm:text-3xl md:text-4xl tracking-tight">
             Water Purifier Service Center in Bangalore
           </h1>
-          <div className="text-gray-700 text-sm sm:text-base leading-relaxed space-y-3 max-w-3xl mx-auto">
-            <p>
-              Looking for a trusted RO Service Center in Bangalore? We provide professional RO repair, AMC, filter replacement, installation, uninstallation, and maintenance services for leading water purifier brands including Kent, Aquaguard, Pureit, AO Smith, LG, Livpure, Havells, V-Guard, and ZeroB. Our experienced technicians offer fast doorstep support and reliable service solutions across Bangalore.
-            </p>
-            <p>
-              Whether your RO purifier is facing low water flow, water leakage, purification issues, unusual noise, or filter replacement alerts, our team can quickly diagnose and resolve the problem. Book your RO service today and keep your water purifier running efficiently.
-            </p>
-          </div>
+          <p className="text-[#1a62d6] font-semibold text-base sm:text-lg md:text-xl">
+            Fast, Reliable & Same-Day RO Repair Service at Your Doorstep
+          </p>
         </section>
+
+        {/* Lead Form */}
+        <div className="pt-2 pb-2">
+          <BrandBookingForm brandName="RO" phone={phone} isHomepage={true} />
+        </div>
+
+        {/* Introduction text moved below form */}
+        <div className="text-gray-700 text-sm sm:text-base leading-relaxed space-y-3 max-w-3xl mx-auto text-center">
+          <p>
+            Looking for a trusted RO Service Center in Bangalore? We provide professional RO repair, AMC, filter replacement, installation, uninstallation, and maintenance services for leading water purifier brands including Kent, Aquaguard, Pureit, AO Smith, LG, Livpure, Havells, V-Guard, and ZeroB. Our experienced technicians offer fast doorstep support and reliable service solutions across Bangalore.
+          </p>
+          <p>
+            Whether your RO purifier is facing low water flow, water leakage, purification issues, unusual noise, or filter replacement alerts, our team can quickly diagnose and resolve the problem. Book your RO service today and keep your water purifier running efficiently.
+          </p>
+        </div>
 
         {/* 4. Mid-Page Pure Water Banner */}
         <div className="w-full max-w-4xl mx-auto my-6 sm:my-8 px-2 sm:px-4">

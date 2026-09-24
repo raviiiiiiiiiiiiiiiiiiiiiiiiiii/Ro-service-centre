@@ -60,18 +60,13 @@ export default function BrandView({ data }: BrandViewProps) {
             />
           </a>
         </div>
-
-        {/* Lead Form moved just below the image in hero section */}
-        <div className="max-w-3xl mx-auto px-2 sm:px-4 pt-4 sm:pt-6">
-          <BrandBookingForm brandName={brandName} phone={phone} />
-        </div>
       </div>
 
       {/* Main Content Container */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 md:py-10 space-y-10">
         
-        {/* 3. Title and Introduction */}
-        <section className="text-center space-y-4">
+        {/* 3. Title and Subheading */}
+        <section className="text-center space-y-2">
           <h1 className="text-gray-900 font-semibold text-2xl sm:text-3xl md:text-4xl tracking-tight">
             {data.pageTitle}
           </h1>
@@ -80,12 +75,19 @@ export default function BrandView({ data }: BrandViewProps) {
               {data.subheading}
             </p>
           )}
-          <div className="text-gray-700 text-sm sm:text-base leading-relaxed space-y-3 max-w-3xl mx-auto">
-            {data.introParagraphs.map((paragraph, idx) => (
-              <p key={idx}>{paragraph}</p>
-            ))}
-          </div>
         </section>
+
+        {/* Lead Form */}
+        <div className="pt-2 pb-2">
+          <BrandBookingForm brandName={brandName} phone={phone} />
+        </div>
+
+        {/* Introduction text moved below form */}
+        <div className="text-gray-700 text-sm sm:text-base leading-relaxed space-y-3 max-w-3xl mx-auto text-center">
+          {data.introParagraphs.map((paragraph, idx) => (
+            <p key={idx}>{paragraph}</p>
+          ))}
+        </div>
 
         {/* 4. Mid-Page Bring Home Banner (Natural aspect ratio, uncropped as-is) */}
         <div className="w-full max-w-4xl mx-auto my-6 sm:my-8 px-2 sm:px-4">

@@ -15,15 +15,18 @@ export default function FloatingCallButton({ phone = '08050291180' }: FloatingCa
     >
       <a
         href={`tel:${phone}`}
-        className="inline-flex items-center bg-[#007ad6] hover:bg-[#006bb8] text-white rounded-full p-1 pr-3 sm:pr-3.5 shadow-[0_4px_18px_rgba(0,122,214,0.45)] border border-white/60 transition-all group"
+        className="inline-flex items-center bg-[#007ad6] hover:bg-[#006bb8] text-white rounded-full p-1 pr-3 sm:pr-3.5 shadow-[0_4px_18px_rgba(0,122,214,0.45)] border border-white/60 transition-all group animate-call-blink hover:animate-none cursor-pointer"
         title={`Click To Call ${phone}`}
       >
-        {/* Left circular cyan phone badge matching reference image */}
-        <div className="w-8 h-8 rounded-full bg-[#00a8e8] border-[1.5px] border-white flex items-center justify-center text-white shrink-0 shadow-xs mr-2">
-          <Phone
-            size={15}
-            className="fill-current text-white transform -rotate-12 group-hover:rotate-0 transition-transform duration-300"
-          />
+        {/* Left circular cyan phone badge with radar ping and ringing wiggle */}
+        <div className="relative mr-2 shrink-0">
+          <span className="absolute inset-0 rounded-full bg-[#00a8e8] animate-ping opacity-50 pointer-events-none" />
+          <div className="relative w-8 h-8 rounded-full bg-[#00a8e8] border-[1.5px] border-white flex items-center justify-center text-white shrink-0 shadow-xs">
+            <Phone
+              size={15}
+              className="fill-current text-white animate-phone-wiggle"
+            />
+          </div>
         </div>
 
         {/* Right column: Click To Call + white capsule with phone number */}
