@@ -8,6 +8,7 @@ import BrandBookingForm from '@/components/BrandBookingForm';
 import BrandFooter from '@/components/BrandFooter';
 import WaterSplashIllustration from '@/components/WaterSplashIllustration';
 import FAQAccordion from '@/components/FAQAccordion';
+import FloatingCallButton from '@/components/FloatingCallButton';
 
 interface BrandViewProps {
   data: BrandData;
@@ -45,7 +46,7 @@ export default function BrandView({ data }: BrandViewProps) {
       />
 
       {/* 2. Hero Purifier Graphic (Natural aspect ratio, uncropped as-is) */}
-      <div className="w-full bg-[#f8fafc] pt-4 pb-2">
+      <div className="w-full bg-[#f8fafc] pt-4 pb-6">
         <div className="max-w-3xl mx-auto px-2 sm:px-4" id="purifier-gallery">
           <a
             href={`tel:${phone}`}
@@ -58,6 +59,11 @@ export default function BrandView({ data }: BrandViewProps) {
               className="w-full h-auto block mx-auto"
             />
           </a>
+        </div>
+
+        {/* Lead Form moved just below the image in hero section */}
+        <div className="max-w-3xl mx-auto px-2 sm:px-4 pt-4 sm:pt-6">
+          <BrandBookingForm brandName={brandName} phone={phone} />
         </div>
       </div>
 
@@ -225,20 +231,10 @@ export default function BrandView({ data }: BrandViewProps) {
             </a>
           </div>
         </section>
-
-        {/* 10. Book Appointment Now Form with Decorative Water Splash */}
-        <section className="relative pt-4 pb-8">
-          {/* Decorative water splash along bottom left */}
-          <div className="absolute -left-12 -bottom-4 w-60 sm:w-80 md:w-96 z-0 pointer-events-none opacity-80">
-            <WaterSplashIllustration />
-          </div>
-
-          {/* Form Card */}
-          <div className="relative z-10">
-            <BrandBookingForm brandName={brandName} phone={phone} />
-          </div>
-        </section>
       </div>
+
+      {/* Floating Call Icon matching reference image */}
+      <FloatingCallButton phone={phone} />
 
       {/* 11. Dark Navy 3-Box Footer with Keywords & Disclaimer */}
       <BrandFooter

@@ -31,7 +31,7 @@ export const brandData: Record<string, BrandData> = {
     pageTitle: 'Kent RO Service Center in Bangalore',
     subheading: 'Fast, Reliable & Same-Day Kent RO Repair Service at Your Doorstep',
     logoImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790261015/IMG-20260924-WA0024.jpg',
-    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788965761/IMG-20260909-WA0012_ywdk3m.jpg',
+    heroImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790262114/IMG-20260923-WA0005.jpg',
     secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788893064/file_00000000a2dc820ba19c675f2156d6ac_kgtmyd.png',
     applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194243_himoc3.jpg',
     introParagraphs: [
@@ -118,7 +118,7 @@ export const brandData: Record<string, BrandData> = {
     description: 'Looking for a trusted Aquaguard RO Service Center in Bangalore? Professional Aquaguard RO repair, AMC, filter replacement, installation & maintenance.',
     pageTitle: 'Aquaguard RO Service Center in Bangalore',
     logoImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790261015/IMG-20260924-WA0025.jpg',
-    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788965761/IMG-20260909-WA0009_soljtz.jpg',
+    heroImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790262114/IMG-20260923-WA0004.jpg',
     secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788893065/file_000000006cf8820b8c51d3b4ca569f88_qtta1j.png',
     applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194328_pcq7uw.png',
     introParagraphs: [
@@ -206,7 +206,7 @@ export const brandData: Record<string, BrandData> = {
     description: 'Looking for a trusted Pureit RO Service Center in Bangalore? Professional Pureit RO repair, AMC, filter replacement, installation & maintenance.',
     pageTitle: 'Pureit Water Purifier Service Center in Bangalore',
     logoImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790261016/IMG-20260924-WA0023.jpg',
-    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788965761/IMG-20260909-WA0011_mmmbwu.jpg',
+    heroImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790262114/IMG-20260923-WA0014.jpg',
     secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788893064/file_00000000d7fc820b9a018cd17cb09d8c_hwjxqk.png',
     applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194420_cdv3yx.jpg',
     introParagraphs: [
@@ -294,7 +294,7 @@ export const brandData: Record<string, BrandData> = {
     description: 'Looking for a trusted AO Smith RO Service Center in Bangalore? Professional AO Smith RO repair, AMC, filter replacement, installation & maintenance.',
     pageTitle: 'AO Smith Water Purifier Service Center in Bangalore',
     logoImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790261016/IMG-20260923-WA0020.jpg',
-    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788965762/IMG-20260909-WA0010_a1igyy.jpg',
+    heroImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790262114/IMG-20260923-WA0015.jpg',
     secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788893065/9e48f8d3086e064b01dc7098bedfb696e26146b54ce8058d6a87234e983b6dc2_ixhnla.png',
     applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194311_vmj5ot.jpg',
     introParagraphs: [
@@ -382,7 +382,7 @@ export const brandData: Record<string, BrandData> = {
     description: 'Looking for a trusted LG RO Service Center in Bangalore? Professional LG RO repair, AMC, filter replacement, installation & maintenance.',
     pageTitle: 'LG Water Purifier Service Center in Bangalore',
     logoImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790261015/IMG-20260923-WA0021.jpg',
-    heroImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788965762/IMG-20260909-WA0008_evpgms.jpg',
+    heroImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790262114/IMG-20260923-WA0016.jpg',
     secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788893065/file_00000000aeb881fab74192e565686842_lq6dcm.png',
     applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194339_j4gjia.jpg',
     introParagraphs: [

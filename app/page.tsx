@@ -7,6 +7,7 @@ import BrandBookingForm from '@/components/BrandBookingForm';
 import BrandFooter from '@/components/BrandFooter';
 import WaterSplashIllustration from '@/components/WaterSplashIllustration';
 import FAQAccordion from '@/components/FAQAccordion';
+import FloatingCallButton from '@/components/FloatingCallButton';
 
 export default function HomePage() {
   const phone = '08050291180';
@@ -134,6 +135,11 @@ export default function HomePage() {
               <span className="text-xs sm:text-sm font-bold text-[#1859c2]">Call: {phone}</span>
             </div>
           </a>
+        </div>
+
+        {/* Lead Form moved up into the hero section */}
+        <div className="max-w-3xl mx-auto px-2 sm:px-4 pt-4 sm:pt-6">
+          <BrandBookingForm brandName="RO" phone={phone} isHomepage={true} />
         </div>
       </div>
 
@@ -306,20 +312,10 @@ export default function HomePage() {
             </a>
           </div>
         </section>
-
-        {/* 10. Book Appointment Now Form with Decorative Water Splash */}
-        <section className="relative pt-4 pb-8">
-          {/* Decorative water splash along bottom left */}
-          <div className="absolute -left-12 -bottom-4 w-60 sm:w-80 md:w-96 z-0 pointer-events-none opacity-80">
-            <WaterSplashIllustration />
-          </div>
-
-          {/* Form Card */}
-          <div className="relative z-10">
-            <BrandBookingForm brandName="RO" phone={phone} isHomepage={true} />
-          </div>
-        </section>
       </div>
+
+      {/* Floating Call Icon matching reference image */}
+      <FloatingCallButton phone={phone} />
 
       {/* 11. Dark Navy 3-Box Footer with Keywords & Disclaimer */}
       <BrandFooter
