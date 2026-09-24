@@ -8,12 +8,14 @@ interface BrandFooterProps {
   addressCity?: string;
   email?: string;
   phone?: string;
+  keywords?: string;
 }
 
 export default function BrandFooter({
   addressCity = 'No. 97, Neeladri Nagar, Electronics City Phase 1 Extension, Bengaluru, Karnataka',
   email = 'Contect@Roservicecentreonline24x7.in',
-  phone = '08050291180'
+  phone = '08050291180',
+  keywords
 }: BrandFooterProps) {
   return (
     <footer className="w-full bg-[#081426] text-white pt-8 pb-20 sm:pb-24 px-4 sm:px-6 lg:px-8 border-t border-[#12284b]">
@@ -90,6 +92,13 @@ export default function BrandFooter({
         <div className="pt-2 text-center text-[11px] text-gray-500 font-normal">
           © Copyright RO Service Centre Online 2026 . All right reserved
         </div>
+
+        {/* Footer Keywords at the very bottom below copyright */}
+        {keywords && (
+          <div className="pt-3 border-t border-white/10 text-center text-xs sm:text-[13px] text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p>{keywords}</p>
+          </div>
+        )}
       </div>
     </footer>
   );

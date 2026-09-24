@@ -8,10 +8,12 @@ interface BrandHeaderProps {
   tollFree?: string;
   locationCity?: string;
   locationState?: string;
+  logoImage?: string;
 }
 
 export default function BrandHeader({
   phone = '08050291180',
+  logoImage = 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790261042/IMG-20260924-WA0019_1.jpg',
 }: BrandHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -28,7 +30,7 @@ export default function BrandHeader({
         </a>
       </div>
 
-      {/* 2. Image Section: Header Banner */}
+      {/* 2. Image Section: Header Banner / Logo */}
       <div className="w-full bg-white py-3 sm:py-4 px-4 flex items-center justify-center border-b border-gray-100">
         <Link
           href="/"
@@ -36,7 +38,7 @@ export default function BrandHeader({
           title="RO Service Centre Online"
         >
           <img
-            src="https://res.cloudinary.com/dieq3fjuv/image/upload/v1788967586/IMG-20260908-WA0018_1_vlpnkp.jpg"
+            src={logoImage}
             alt="Authorised Service Center - Water Purifier"
             className="h-16 sm:h-20 md:h-24 w-auto max-w-[90vw] object-contain mx-auto"
             onError={(e) => {

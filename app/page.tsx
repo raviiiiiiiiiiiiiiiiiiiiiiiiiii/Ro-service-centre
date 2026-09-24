@@ -6,13 +6,12 @@ import BrandHeader from '@/components/BrandHeader';
 import BrandBookingForm from '@/components/BrandBookingForm';
 import BrandFooter from '@/components/BrandFooter';
 import WaterSplashIllustration from '@/components/WaterSplashIllustration';
+import FAQAccordion from '@/components/FAQAccordion';
 
 export default function HomePage() {
-  const brandName = 'Ro';
   const phone = '08050291180';
   const email = 'Contect@Roservicecentreonline24x7.in';
   const address = 'No. 97, Neeladri Nagar, Electronics City Phase 1 Extension, Bengaluru, Karnataka';
-  const city = 'BENGALURU';
   const state = 'Karnataka';
 
   const scrollToLeadForm = (e?: React.MouseEvent) => {
@@ -27,6 +26,81 @@ export default function HomePage() {
     }
   };
 
+  const services = [
+    '✔ Kent RO Repair & Service',
+    '✔ Aquaguard RO Repair & Service',
+    '✔ Pureit RO Repair & Service',
+    '✔ AO Smith RO Repair & Service',
+    '✔ LG RO Repair & Service',
+    '✔ Livpure RO Repair & Service',
+    '✔ Havells RO Repair & Service',
+    '✔ V-Guard RO Repair & Service',
+    '✔ ZeroB RO Repair & Service',
+    '✔ RO AMC & Maintenance Service',
+    '✔ RO Filter & Membrane Replacement',
+    '✔ RO Installation & Uninstallation Service'
+  ];
+
+  const problems = [
+    '✔ RO Not Dispensing Water',
+    '✔ Low Water Pressure',
+    '✔ Water Leakage Issues',
+    '✔ Bad Taste or Odor in Water',
+    '✔ Filter Replacement Alerts',
+    '✔ RO Making Unusual Noise',
+    '✔ Power Supply Issues',
+    '✔ RO Not Purifying Water',
+    '✔ Slow Water Flow',
+    '✔ Tank Not Filling Properly',
+    '✔ Water Overflow Problems',
+    '✔ Regular Service & Maintenance Issues'
+  ];
+
+  const whyChooseItems = [
+    '✔ Experienced RO Technicians',
+    '✔ Same-Day Doorstep Service',
+    '✔ Support for Major RO Brands',
+    '✔ AMC & Maintenance Support',
+    '✔ Genuine Filter & Spare Parts Support',
+    '✔ Bangalore-Wide Service Coverage'
+  ];
+
+  const faqs = [
+    {
+      q: 'Q. Do you provide RO service in Bangalore?',
+      a: 'A. Yes, we provide repair, AMC, installation, and filter replacement services across Bangalore.'
+    },
+    {
+      q: 'Q. Do you offer same-day RO service?',
+      a: 'A. Yes, same-day doorstep service is available in most Bangalore locations.'
+    },
+    {
+      q: 'Q. Which RO brands do you support?',
+      a: 'A. We support Kent, Aquaguard, Pureit, AO Smith, LG, Livpure, Havells, V-Guard, ZeroB, and other major brands.'
+    },
+    {
+      q: 'Q. Do you replace RO filters and membranes?',
+      a: 'A. Yes, we provide filter replacement and membrane replacement services.'
+    },
+    {
+      q: 'Q. Do you provide AMC plans?',
+      a: 'A. Yes, annual maintenance plans are available for regular servicing and support.'
+    },
+    {
+      q: 'Q. How can I book an RO service appointment?',
+      a: 'A. You can contact our support team and schedule a doorstep service visit.'
+    }
+  ];
+
+  const needMoreHelpBullets = [
+    '✔ Fast Customer Support',
+    '✔ Easy Appointment Scheduling',
+    '✔ Reliable Service Assistance',
+    '✔ Bangalore-Wide Coverage'
+  ];
+
+  const footerKeywords = 'RO Service Center Bangalore | Kent RO Service | Aquaguard RO Service | Pureit RO Service | AO Smith RO Service | LG RO Service | Livpure RO Service | Havells RO Service | V-Guard RO Service | ZeroB RO Service';
+
   return (
     <div className="min-h-screen bg-white text-gray-800 font-sans selection:bg-[#1859c2] selection:text-white">
       {/* 1. Header with Logo, Location, Toll Free, and Navigation Bar */}
@@ -35,9 +109,10 @@ export default function HomePage() {
         tollFree="18001201622"
         locationCity="Bengaluru"
         locationState={state}
+        logoImage="https://res.cloudinary.com/b1znkr1c/image/upload/v1790261042/IMG-20260924-WA0019_1.jpg"
       />
 
-      {/* 2. Hero Purifier Graphic with previous homepage technician image (No brand logo box, No brand selector) */}
+      {/* 2. Hero Purifier Graphic with Doorstep Technician banner */}
       <div className="w-full bg-[#f8fafc] pt-4 pb-2">
         <div className="max-w-3xl mx-auto px-2 sm:px-4" id="purifier-gallery">
           <a
@@ -68,19 +143,19 @@ export default function HomePage() {
         {/* 3. Title and Introduction */}
         <section className="text-center space-y-4">
           <h1 className="text-gray-900 font-semibold text-2xl sm:text-3xl md:text-4xl tracking-tight">
-            Ro Water Purifier Service Center in Bangalore
+            Water Purifier Service Center in Bangalore
           </h1>
           <div className="text-gray-700 text-sm sm:text-base leading-relaxed space-y-3 max-w-3xl mx-auto">
             <p>
-              Looking for a <strong className="font-semibold text-gray-900">reliable {brandName} service center</strong> for your water heater or RO water purifier? We provide <strong className="font-semibold text-gray-900">professional repair, maintenance, and installation services</strong> for all {brandName} models. Our experienced and factory-trained technicians deliver quick diagnosis, accurate repairs, and <strong className="font-semibold text-gray-900">long-lasting solutions</strong> to ensure uninterrupted performance of your appliance.
+              Looking for a trusted RO Service Center in Bangalore? We provide professional RO repair, AMC, filter replacement, installation, uninstallation, and maintenance services for leading water purifier brands including Kent, Aquaguard, Pureit, AO Smith, LG, Livpure, Havells, V-Guard, and ZeroB. Our experienced technicians offer fast doorstep support and reliable service solutions across Bangalore.
             </p>
             <p>
-              Whether it&apos;s a malfunctioning geyser, reduced RO water flow, leakage, or error indicators, our service team is equipped with the right tools, technical expertise, and genuine spare parts to restore your appliance to optimal working condition.
+              Whether your RO purifier is facing low water flow, water leakage, purification issues, unusual noise, or filter replacement alerts, our team can quickly diagnose and resolve the problem. Book your RO service today and keep your water purifier running efficiently.
             </p>
           </div>
         </section>
 
-        {/* 4. Mid-Page Pure Water Banner (Previous homepage image) */}
+        {/* 4. Mid-Page Pure Water Banner */}
         <div className="w-full max-w-4xl mx-auto my-6 sm:my-8 px-2 sm:px-4">
           <a
             href={`tel:${phone}`}
@@ -103,75 +178,88 @@ export default function HomePage() {
           </a>
         </div>
 
-        {/* 5. Our Ro Services */}
-        <section className="text-center space-y-4" id="services-grid">
-          <h2 className="text-[#1a62d6] font-semibold text-2xl sm:text-3xl tracking-tight">
-            Our {brandName} Services
+        {/* 5. Our RO Services in Bangalore */}
+        <section className="space-y-4 text-center" id="services-grid">
+          <h2 className="text-[#1a62d6] font-bold text-2xl sm:text-3xl tracking-tight text-center">
+            Our RO Services in Bangalore
           </h2>
-          <div className="space-y-2 text-sm sm:text-base text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            <p>
-              <strong className="font-semibold text-gray-900">{brandName} Water Purifier Repair & Service</strong> – Complete troubleshooting and repair for power, leakage, and thermostat issues.
-            </p>
-            <p>
-              <strong className="font-semibold text-gray-900">{brandName} Water Purifier Repair</strong> – Fix purification problems, filter issues, low flow, and error indicators.
-            </p>
-            <p>
-              <strong className="font-semibold text-gray-900">Installation & Uninstallation Support</strong> – Safe and professional installation or removal of {brandName} appliances.
-            </p>
-            <p>
-              <strong className="font-semibold text-gray-900">Annual Maintenance Contracts (AMC)</strong> – Affordable AMC plans for regular servicing and preventive maintenance.
-            </p>
-            <p>
-              <strong className="font-semibold text-gray-900">Genuine Spare Parts Replacement</strong> – Only high-quality and compatible spare parts used for long-term reliability.
-            </p>
+          <div className="space-y-2.5 max-w-xl mx-auto px-4">
+            {services.map((item, idx) => {
+              const text = item.replace(/^[✔\u2714\u2713•\-\*]\s*/, '');
+              return (
+                <p key={idx} className="text-center text-gray-900 font-medium text-base sm:text-lg">
+                  <span className="text-emerald-600 font-bold text-lg sm:text-xl mr-2">✔</span>
+                  <span>{text}</span>
+                </p>
+              );
+            })}
           </div>
         </section>
 
-        {/* 6. Common Ro Problems We Fix */}
-        <section className="text-center space-y-4">
-          <h2 className="text-[#1a62d6] font-semibold text-2xl sm:text-3xl tracking-tight">
-            Common {brandName} Problems We Fix
+        {/* 6. Common RO Problems We Fix */}
+        <section className="space-y-4 text-center">
+          <h2 className="text-[#1a62d6] font-bold text-2xl sm:text-3xl tracking-tight text-center">
+            Common RO Problems We Fix
           </h2>
-          <div className="space-y-1.5 text-sm sm:text-base text-gray-700 max-w-xl mx-auto">
-            <p>Water heater not heating properly</p>
-            <p>Geyser leakage, power failure, or tripping issues</p>
-            <p>{brandName} RO not purifying water effectively</p>
-            <p>Low water flow or slow dispensing from RO purifier</p>
-            <p>Error lights, warning indicators, or unusual noise</p>
+          <div className="space-y-2.5 max-w-xl mx-auto px-4">
+            {problems.map((item, idx) => {
+              const text = item.replace(/^[✔\u2714\u2713•\-\*]\s*/, '');
+              return (
+                <p key={idx} className="text-center text-gray-900 font-medium text-base sm:text-lg">
+                  <span className="text-emerald-600 font-bold text-lg sm:text-xl mr-2">✔</span>
+                  <span>{text}</span>
+                </p>
+              );
+            })}
           </div>
         </section>
 
-        {/* 7. Why Choose Our Ro Service Center? */}
-        <section className="text-center space-y-4">
-          <h2 className="text-[#1a62d6] font-semibold text-2xl sm:text-3xl tracking-tight">
-            Why Choose Our {brandName} Service Center?
+        {/* 7. Why Choose Our RO Service Center Bangalore? */}
+        <section className="space-y-4 text-center">
+          <h2 className="text-[#1a62d6] font-bold text-2xl sm:text-3xl tracking-tight text-center">
+            Why Choose Our RO Service Center Bangalore?
           </h2>
-          <div className="space-y-2 text-sm sm:text-base text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            <p>
-              <strong className="font-semibold text-gray-900">Experienced & Verified Technicians</strong> – Skilled professionals trained to handle all {brandName} models.
-            </p>
-            <p>
-              <strong className="font-semibold text-gray-900">Same-Day Doorstep Service</strong> – Fast response and quick service at your location.
-            </p>
-            <p>
-              <strong className="font-semibold text-gray-900">Affordable & Transparent Pricing</strong> – No hidden charges, clear cost estimates.
-            </p>
-            <p>
-              <strong className="font-semibold text-gray-900">Support for All {brandName} Models</strong> – Old and new water heaters and RO systems covered.
-            </p>
-            <p>
-              <strong className="font-semibold text-gray-900">Customer Satisfaction Guaranteed</strong> – Quality service you can trust.
-            </p>
+          <div className="space-y-3 max-w-2xl mx-auto px-4 leading-relaxed">
+            {whyChooseItems.map((rawItem, idx) => {
+              const hasTick = /^[✔\u2714\u2713•\-\*]/.test(rawItem);
+              const cleanItem = rawItem.replace(/^[✔\u2714\u2713•\-\*]\s*/, '');
+              const dashMatch = cleanItem.match(/^([^–—\:-]+?)\s*[–—\-]\s*(.+)$/);
+              if (dashMatch) {
+                const title = dashMatch[1].trim();
+                const desc = dashMatch[2].trim();
+                return (
+                  <p key={idx} className="text-center text-gray-800 text-base sm:text-lg">
+                    {hasTick && <span className="text-emerald-600 font-bold text-lg sm:text-xl mr-2">✔</span>}
+                    <strong className="font-semibold text-gray-900">{title} – </strong>
+                    <span className="text-gray-700">{desc}</span>
+                  </p>
+                );
+              }
+              return (
+                <p key={idx} className="text-center text-gray-900 font-medium text-base sm:text-lg">
+                  {hasTick && <span className="text-emerald-600 font-bold text-lg sm:text-xl mr-2">✔</span>}
+                  <span>{cleanItem}</span>
+                </p>
+              );
+            })}
           </div>
         </section>
 
-        {/* 8. Book Ro Service Today */}
+        {/* Frequently Asked Questions (Accordion design matching screenshot) */}
+        {faqs && faqs.length > 0 && (
+          <FAQAccordion 
+            faqs={faqs} 
+            subtitle="Everything you need to know about our RO repair & maintenance services in Bangalore."
+          />
+        )}
+
+        {/* 8. Book Ro Service Today (NO CHANGES - Kept intact as requested) */}
         <section className="text-center space-y-3">
           <h2 className="text-[#1a62d6] font-semibold text-2xl sm:text-3xl tracking-tight">
-            Book {brandName} Service Today
+            Book Ro Service Today
           </h2>
           <p className="text-gray-700 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Get <strong className="font-semibold text-gray-900">fast, dependable, and professional {brandName} repair service</strong> at your doorstep. Our support team is ready to assist you with quick booking and immediate service scheduling.
+            Get <strong className="font-semibold text-gray-900">fast, dependable, and professional Ro repair service</strong> at your doorstep. Our support team is ready to assist you with quick booking and immediate service scheduling.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-sm sm:text-base font-semibold text-gray-800">
             <a 
@@ -179,7 +267,7 @@ export default function HomePage() {
               className="inline-flex items-center gap-2 hover:text-[#1a62d6] transition-colors"
             >
               <Phone size={18} className="text-gray-800 fill-current" />
-              <span>Call Now for {brandName} Service Support</span>
+              <span>Call Now for Ro Service Support</span>
             </a>
             <div className="inline-flex items-center gap-2">
               <Clock size={18} className="text-gray-800" />
@@ -189,13 +277,26 @@ export default function HomePage() {
         </section>
 
         {/* 9. Need More Help? */}
-        <section className="text-center space-y-2 pt-2">
+        <section className="text-center space-y-3 pt-2">
           <h2 className="text-[#1a62d6] font-semibold text-2xl sm:text-3xl tracking-tight">
             Need More Help?
           </h2>
-          <p className="text-gray-600 text-sm sm:text-base max-w-xl mx-auto">
-            Connect instantly with our dedicated support team for service requests, pricing details, or technical assistance.
+          <p className="text-gray-700 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+            Need assistance with RO repair, AMC plans, filter replacement, or installation services? Our support team is ready to help with service booking, pricing information, and technical support across Bangalore.
           </p>
+          {needMoreHelpBullets && needMoreHelpBullets.length > 0 && (
+            <div className="space-y-2 max-w-md mx-auto pt-1 px-4">
+              {needMoreHelpBullets.map((bullet, idx) => {
+                const text = bullet.replace(/^[✔\u2714\u2713•\-\*]\s*/, '');
+                return (
+                  <p key={idx} className="text-center text-gray-900 font-medium text-base sm:text-lg">
+                    <span className="text-emerald-600 font-bold text-lg sm:text-xl mr-2">✔</span>
+                    <span>{text}</span>
+                  </p>
+                );
+              })}
+            </div>
+          )}
           <div className="pt-2">
             <a
               href={`tel:${phone}`}
@@ -220,11 +321,12 @@ export default function HomePage() {
         </section>
       </div>
 
-      {/* 11. Dark Navy 3-Box Footer with Disclaimer */}
+      {/* 11. Dark Navy 3-Box Footer with Keywords & Disclaimer */}
       <BrandFooter
         addressCity={address}
         email={email}
         phone={phone}
+        keywords={footerKeywords}
       />
 
       {/* Sticky Two-Button Footer: Call Us & Book Now */}
