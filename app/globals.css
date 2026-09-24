@@ -180,4 +180,25 @@ nextjs-portal,
   animation: phone-wiggle 1.8s ease-in-out infinite;
 }
 
+@keyframes marquee-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-slide {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee-slide 28s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-slide:hover {
+  animation-play-state: paused;
+}
+
+
 

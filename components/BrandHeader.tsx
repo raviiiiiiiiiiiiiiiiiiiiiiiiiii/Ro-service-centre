@@ -48,15 +48,42 @@ export default function BrandHeader({
         </Link>
       </div>
 
-      {/* 3. Dark Blue Bar with Red/Coral Hamburger Menu Button & Dropdown */}
-      <div className="w-full bg-[#16386d]">
-        <div className="max-w-4xl mx-auto px-3 sm:px-4 py-2 sm:py-2.5 flex items-center justify-end">
+      {/* 3. Dark Blue Bar with Continuous Sliding Announcement & Red/Coral Hamburger Menu Button */}
+      <div className="w-full bg-[#16386d] overflow-hidden border-t border-b border-[#0f2952]">
+        <div className="max-w-6xl mx-auto px-2 sm:px-4 py-1.5 sm:py-2 flex items-center justify-between gap-2 sm:gap-3">
+          
+          {/* Continuous Sliding Announcement Bar */}
+          <div className="flex-1 overflow-hidden flex items-center min-w-0">
+            <div className="overflow-hidden relative w-full select-none">
+              <div className="animate-marquee-slide inline-flex items-center text-white/95 text-xs sm:text-sm font-medium tracking-wide">
+                {/* First set */}
+                <div className="inline-flex items-center shrink-0 pr-16 sm:pr-24">
+                  <span>
+                    Professional Doorstep RO Water Purifier Repair, Maintenance, Installation &amp; Filter Replacement Services Across Bangalore — Same Day Service Within 60 to 90 Minutes by Verified Technicians for Kent, Aquaguard, Pureit, AO Smith, LG and All Leading Brands — Call Now:{' '}
+                    <a href={`tel:${phone}`} className="hover:underline font-bold text-white tracking-wide">
+                      {phone}
+                    </a>
+                  </span>
+                </div>
+                {/* Duplicate set for seamless continuous sliding */}
+                <div className="inline-flex items-center shrink-0 pr-16 sm:pr-24" aria-hidden="true">
+                  <span>
+                    Professional Doorstep RO Water Purifier Repair, Maintenance, Installation &amp; Filter Replacement Services Across Bangalore — Same Day Service Within 60 to 90 Minutes by Verified Technicians for Kent, Aquaguard, Pureit, AO Smith, LG and All Leading Brands — Call Now:{' '}
+                    <a href={`tel:${phone}`} className="hover:underline font-bold text-white tracking-wide">
+                      {phone}
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Red/Coral Rounded Square Hamburger Button matching screenshot */}
           <button
             type="button"
             id="brand-header-hamburger-toggle"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="bg-[#e75a4e] hover:bg-[#d84a3e] active:scale-95 text-white w-9 h-8 sm:w-10 sm:h-9 rounded transition-all shadow-xs flex items-center justify-center cursor-pointer"
+            className="bg-[#e75a4e] hover:bg-[#d84a3e] active:scale-95 text-white w-9 h-8 sm:w-10 sm:h-9 rounded transition-all shadow-xs flex items-center justify-center shrink-0 cursor-pointer ml-1"
             aria-label="Toggle navigation menu"
             aria-expanded={menuOpen}
           >
