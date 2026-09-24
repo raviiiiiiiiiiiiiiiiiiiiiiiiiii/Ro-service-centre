@@ -31,10 +31,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`scroll-smooth ${inter.variable} ${plusJakartaSans.variable}`}>
       <head>
-        <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
-        <link rel="preconnect" href="https://lh3.googleusercontent.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://lh3.googleusercontent.com" />
+        <link rel="preload" as="image" href="/assets/homepage-hero.jpg" />
+        <link rel="preload" as="image" href="/assets/homepage-logo.webp" />
       </head>
       <body className="min-h-screen flex flex-col bg-surface text-on-surface antialiased">
         <LayoutContent>{children}</LayoutContent>

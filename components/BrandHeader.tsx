@@ -13,7 +13,7 @@ interface BrandHeaderProps {
 
 export default function BrandHeader({
   phone = '08050291180',
-  logoImage = 'https://res.cloudinary.com/b1znkr1c/image/upload/f_auto,q_auto/v1790261042/IMG-20260924-WA0019_1.jpg',
+  logoImage = '/assets/homepage-logo.webp',
 }: BrandHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 

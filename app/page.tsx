@@ -110,7 +110,7 @@ export default function HomePage() {
         tollFree="18001201622"
         locationCity="Bengaluru"
         locationState={state}
-        logoImage="https://res.cloudinary.com/b1znkr1c/image/upload/f_auto,q_auto/v1790261042/IMG-20260924-WA0019_1.jpg"
+        logoImage="/assets/homepage-logo.webp"
       />
 
       {/* 2. Hero Purifier Graphic with Doorstep Technician banner */}
@@ -122,7 +122,7 @@ export default function HomePage() {
             title={`Call RO Water Purifier Service at ${phone}`}
           >
             <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk9HNCjhopbPFEMZ8DfINTyZFNwwELgCjTOHLRz3q6_Fw_BYuYY9R-_AcF1mt_yo1tlW2rAV3jtnStF0c6aA7i9LlgY4BDlcRnMk6mZdDFfHjqQFplXGpAMDGNIprVO3shf5Sjly778lt6cKrHpg5YER8v6RnNGaeWOULKJmswoohfz5JJgT4pwkwhXEYxnHwhAUS3W0pdnPakzFJHSrLnN-LjG74Iu7xFjoEctqnU-6kOWGYLKP7VxA"
+              src="/assets/homepage-hero.jpg"
               alt="RO Water Purifier Service Center Bangalore - Doorstep Technician"
               width={768}
               height={420}
@@ -179,7 +179,7 @@ export default function HomePage() {
             title={`Call RO Water Purifier Service at ${phone}`}
           >
             <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD84scjixxyU-5KYdES2jS_HsLZ9_C9KQxDqc4JgdczgASVd3t13MRcjBkM4pN2UgUcMUGsS6NiN9Wn-9NIk3NjRVefTecy0K6WDQQTSIatgwG6dlg8_ENlGtPVJh8NHxLZRNdVHgIgm9cXugaOpapTPiABq3bRYpDEYzmZXGp2Ghy7LjyUvzXfPszpb3TfpaYb6cXsS99KqOIsXDrFkw9C2t7O6vyNvf5a9MwWj9yCTCDD4nc-Xmckfw"
+              src="/assets/homepage-mid.jpg"
               alt="100% Pure & Safe Drinking Water - RO Water Purifier Service"
               width={768}
               height={340}
