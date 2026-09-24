@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Phone } from 'lucide-react';
 
 interface FloatingCallButtonProps {
@@ -8,10 +8,34 @@ interface FloatingCallButtonProps {
 }
 
 export default function FloatingCallButton({ phone = '08050291180' }: FloatingCallButtonProps) {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    // Delay non-critical floating widget until browser is idle
+    if (typeof window !== 'undefined') {
+      if ('requestIdleCallback' in window) {
+        const handle = (window as unknown as { requestIdleCallback: (cb: () => void, opts?: { timeout: number }) => number }).requestIdleCallback(
+          () => setVisible(true),
+          { timeout: 1500 }
+        );
+        return () => {
+          if ('cancelIdleCallback' in window) {
+            (window as unknown as { cancelIdleCallback: (id: number) => void }).cancelIdleCallback(handle);
+          }
+        };
+      } else {
+        const timer = setTimeout(() => setVisible(true), 1200);
+        return () => clearTimeout(timer);
+      }
+    }
+  }, []);
+
+  if (!visible) return null;
+
   return (
     <aside
       aria-label="Click To Call"
-      className="fixed bottom-20 right-3 sm:bottom-6 sm:right-6 z-40 select-none transition-transform hover:scale-105 active:scale-95 duration-200"
+      className="fixed bottom-20 right-3 sm:bottom-6 sm:right-6 z-40 select-none transition-transform hover:scale-105 active:scale-95 duration-200 animate-in fade-in duration-300"
     >
       <a
         href={`tel:${phone}`}

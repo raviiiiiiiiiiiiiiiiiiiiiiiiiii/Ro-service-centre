@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { Phone, Clock, Calendar } from 'lucide-react';
 import type { BrandData } from '@/data/brands';
@@ -21,18 +19,6 @@ export default function BrandView({ data }: BrandViewProps) {
   const address = 'No. 97, Neeladri Nagar, Electronics City Phase 1 Extension, Bengaluru, Karnataka';
   const city = 'BENGALURU';
   const state = 'Karnataka';
-
-  const scrollToLeadForm = (e?: React.MouseEvent) => {
-    if (e) e.preventDefault();
-    const formElement = document.getElementById('appointment-form');
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      const firstInput = formElement.querySelector('input') as HTMLInputElement | null;
-      if (firstInput) {
-        setTimeout(() => firstInput.focus(), 500);
-      }
-    }
-  };
 
   return (
     <div className="min-h-screen bg-white text-gray-800 font-sans selection:bg-[#1859c2] selection:text-white">
@@ -270,16 +256,15 @@ export default function BrandView({ data }: BrandViewProps) {
           </a>
 
           {/* Book Now Button - Scrolls to lead form */}
-          <button
-            type="button"
+          <a
+            href="#appointment-form"
             id="sticky-book-now-btn"
-            onClick={scrollToLeadForm}
             className="inline-flex items-center justify-center gap-2 sm:gap-2.5 py-3 sm:py-3.5 px-3 sm:px-5 bg-[#d9383a] hover:bg-[#bf2628] text-white rounded-lg sm:rounded-xl font-black text-sm sm:text-base md:text-lg tracking-wide shadow-md active:scale-95 transition-all text-center cursor-pointer group"
             title="Book Service Appointment"
           >
             <Calendar size={18} className="flex-shrink-0" />
             <span className="truncate">Book Now</span>
-          </button>
+          </a>
         </div>
       </div>
     </div>

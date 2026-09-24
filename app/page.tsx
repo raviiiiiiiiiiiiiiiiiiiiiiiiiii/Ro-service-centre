@@ -112,7 +112,8 @@ export default function HomePage() {
               alt="RO Water Purifier Service Center Bangalore - Doorstep Technician"
               width={768}
               height={420}
-              className="w-full h-[280px] sm:h-[380px] md:h-[420px] object-cover object-top mx-auto transition-transform duration-300 group-hover:scale-[1.01]"
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 768px, 768px"
+              className="w-full h-[280px] sm:h-[380px] md:h-[420px] object-cover object-top mx-auto"
               loading="eager"
               fetchPriority="high"
               decoding="async"
@@ -120,7 +121,7 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-transparent pointer-events-none"></div>
             <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 bg-white/95 backdrop-blur-sm px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg shadow-sm border border-gray-200">
               <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
                 <span className="text-xs sm:text-sm font-semibold text-gray-900">Doorstep RO Repair & Service in 60-90 Mins</span>
               </div>
               <span className="text-xs sm:text-sm font-bold text-[#1859c2]">Call: {phone}</span>
