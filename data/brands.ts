@@ -30,10 +30,10 @@ export const brandData: Record<string, BrandData> = {
     description: 'Looking for a trusted Kent Water Purifier Service Center in Bangalore? Professional Kent RO repair, AMC, installation, filter & membrane replacement across Bangalore.',
     pageTitle: 'Kent Water Purifier Service Center in Bangalore',
     subheading: 'Fast, Reliable & Same-Day Kent RO Repair Service at Your Doorstep',
-    logoImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790261015/IMG-20260924-WA0024.jpg',
-    heroImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790280275/IMG-20260924-WA0040.jpg',
-    secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788893064/file_00000000a2dc820ba19c675f2156d6ac_kgtmyd.png',
-    applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194243_himoc3.jpg',
+    logoImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/f_auto,q_auto/v1790261015/IMG-20260924-WA0024.jpg',
+    heroImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/f_auto,q_auto/v1790280275/IMG-20260924-WA0040.jpg',
+    secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/f_auto,q_auto,w_900/v1788893064/file_00000000a2dc820ba19c675f2156d6ac_kgtmyd.png',
+    applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/f_auto,q_auto,w_800/v1786544412/IMG_20260812_194243_himoc3.jpg',
     introParagraphs: [
       'Looking for a trusted Kent RO Service Center in Bangalore? We provide professional Kent RO repair, AMC, installation, uninstallation, filter replacement, membrane replacement, and complete water purifier maintenance services across Bangalore. Our experienced technicians offer fast doorstep support, genuine spare parts, affordable pricing, and same-day service for all Kent RO water purifier models.',
       'Whether your Kent RO is not purifying water, has low water flow, leakage issues, unusual noise, bad taste in water, or filter replacement alerts, our expert team can diagnose and fix the problem quickly. Book your Kent RO service today and get reliable water purifier repair support anywhere in Bangalore.'
@@ -118,10 +118,10 @@ export const brandData: Record<string, BrandData> = {
     description: 'Looking for a trusted Aquaguard Water Purifier Service Center in Bangalore? Professional Aquaguard RO repair, AMC, filter replacement, installation & maintenance.',
     pageTitle: 'Aquaguard Water Purifier Service Center in Bangalore',
     subheading: 'Fast, Reliable & Same-Day Aquaguard RO Repair Service at Your Doorstep',
-    logoImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790261015/IMG-20260924-WA0025.jpg',
-    heroImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790280275/IMG-20260924-WA0043.jpg',
-    secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788893065/file_000000006cf8820b8c51d3b4ca569f88_qtta1j.png',
-    applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194328_pcq7uw.png',
+    logoImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/f_auto,q_auto/v1790261015/IMG-20260924-WA0025.jpg',
+    heroImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/f_auto,q_auto/v1790280275/IMG-20260924-WA0043.jpg',
+    secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/f_auto,q_auto,w_900/v1788893065/file_000000006cf8820b8c51d3b4ca569f88_qtta1j.png',
+    applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/f_auto,q_auto,w_800/v1786544412/IMG_20260812_194328_pcq7uw.png',
     introParagraphs: [
       'Looking for a trusted Aquaguard RO Service Center in Bangalore? We provide professional Aquaguard RO repair, AMC, filter replacement, installation, uninstallation, and maintenance services for all Aquaguard water purifier models. Our experienced technicians offer fast doorstep support, genuine spare parts, and reliable service solutions across Bangalore.',
       'Whether your Aquaguard RO is not purifying water, has low water flow, leakage issues, unusual noise, or filter replacement alerts, our team can quickly diagnose and resolve the problem. Book your Aquaguard water service today and keep your water purifier running efficiently.'
@@ -207,10 +207,10 @@ export const brandData: Record<string, BrandData> = {
     description: 'Looking for a trusted Pureit RO Service Center in Bangalore? Professional Pureit RO repair, AMC, filter replacement, installation & maintenance.',
     pageTitle: 'Pureit Water Purifier Service Center in Bangalore',
     subheading: 'Fast, Reliable & Same-Day Pureit RO Repair Service at Your Doorstep',
-    logoImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790261016/IMG-20260924-WA0023.jpg',
-    heroImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790280275/IMG-20260924-WA0042.jpg',
-    secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788893064/file_00000000d7fc820b9a018cd17cb09d8c_hwjxqk.png',
-    applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194420_cdv3yx.jpg',
+    logoImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/f_auto,q_auto/v1790261016/IMG-20260924-WA0023.jpg',
+    heroImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/f_auto,q_auto/v1790280275/IMG-20260924-WA0042.jpg',
+    secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/f_auto,q_auto,w_900/v1788893064/file_00000000d7fc820b9a018cd17cb09d8c_hwjxqk.png',
+    applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/f_auto,q_auto,w_800/v1786544412/IMG_20260812_194420_cdv3yx.jpg',
     introParagraphs: [
       'Looking for a trusted Pureit RO Service Center in Bangalore? We provide professional Pureit RO repair, AMC, filter replacement, installation, uninstallation, and maintenance services for all Pureit water purifier models. Our experienced technicians offer fast doorstep support, genuine spare parts, and reliable service solutions across Bangalore.',
       'Whether your Pureit RO is not purifying water, has low water flow, leakage issues, unusual noise, or filter replacement alerts, our team can quickly diagnose and resolve the problem. Book your Pureit Water Purifier service today and keep your water purifier running efficiently.'
@@ -296,10 +296,10 @@ export const brandData: Record<string, BrandData> = {
     description: 'Looking for a trusted AO Smith RO Service Center in Bangalore? Professional AO Smith RO repair, AMC, filter replacement, installation & maintenance.',
     pageTitle: 'AO Smith Water Purifier Service Center in Bangalore',
     subheading: 'Fast, Reliable & Same-Day AO Smith RO Repair Service at Your Doorstep',
-    logoImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790261016/IMG-20260923-WA0020.jpg',
-    heroImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790280274/IMG-20260924-WA0039.jpg',
-    secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788893065/9e48f8d3086e064b01dc7098bedfb696e26146b54ce8058d6a87234e983b6dc2_ixhnla.png',
-    applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194311_vmj5ot.jpg',
+    logoImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/f_auto,q_auto/v1790261016/IMG-20260923-WA0020.jpg',
+    heroImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/f_auto,q_auto/v1790280274/IMG-20260924-WA0039.jpg',
+    secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/f_auto,q_auto,w_900/v1788893065/9e48f8d3086e064b01dc7098bedfb696e26146b54ce8058d6a87234e983b6dc2_ixhnla.png',
+    applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/f_auto,q_auto,w_800/v1786544412/IMG_20260812_194311_vmj5ot.jpg',
     introParagraphs: [
       'Looking for a trusted AO Smith RO Service Center in Bangalore? We provide professional AO Smith RO repair, AMC, filter replacement, installation, uninstallation, and maintenance services for all AO Smith water purifier models. Our experienced technicians offer fast doorstep support, genuine spare parts, and reliable service solutions across Bangalore.',
       'Whether your AO Smith RO is not purifying water, has low water flow, leakage issues, unusual noise, or filter replacement alerts, our team can quickly diagnose and resolve the problem. Book your AO Smith RO service today and keep your water purifier running efficiently.'
@@ -385,10 +385,10 @@ export const brandData: Record<string, BrandData> = {
     description: 'Looking for a trusted LG RO Service Center in Bangalore? Professional LG RO repair, AMC, filter replacement, installation & maintenance.',
     pageTitle: 'LG Water Purifier Service Center in Bangalore',
     subheading: 'Fast, Reliable & Same-Day LG RO Repair Service at Your Doorstep',
-    logoImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790261015/IMG-20260923-WA0021.jpg',
-    heroImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790280275/IMG-20260924-WA0041.jpg',
-    secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1788893065/file_00000000aeb881fab74192e565686842_lq6dcm.png',
-    applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/v1786544412/IMG_20260812_194339_j4gjia.jpg',
+    logoImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/f_auto,q_auto/v1790261015/IMG-20260923-WA0021.jpg',
+    heroImage: 'https://res.cloudinary.com/b1znkr1c/image/upload/f_auto,q_auto/v1790280275/IMG-20260924-WA0041.jpg',
+    secondImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/f_auto,q_auto,w_900/v1788893065/file_00000000aeb881fab74192e565686842_lq6dcm.png',
+    applianceImage: 'https://res.cloudinary.com/dieq3fjuv/image/upload/f_auto,q_auto,w_800/v1786544412/IMG_20260812_194339_j4gjia.jpg',
     introParagraphs: [
       'Looking for a trusted LG RO Service Center in Bangalore? We provide professional LG RO repair, AMC, filter replacement, installation, uninstallation, and maintenance services for all LG water purifier models. Our experienced technicians offer fast doorstep support, quality spare parts, and reliable service solutions across Bangalore.',
       'Whether your LG RO is not purifying water, has low water flow, leakage issues, unusual noise, or filter replacement alerts, our team can quickly diagnose and resolve the problem. Book your LG RO service today and keep your water purifier running efficiently.'

@@ -13,7 +13,7 @@ interface BrandHeaderProps {
 
 export default function BrandHeader({
   phone = '08050291180',
-  logoImage = 'https://res.cloudinary.com/b1znkr1c/image/upload/v1790261042/IMG-20260924-WA0019_1.jpg',
+  logoImage = 'https://res.cloudinary.com/b1znkr1c/image/upload/f_auto,q_auto/v1790261042/IMG-20260924-WA0019_1.jpg',
 }: BrandHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -45,6 +45,9 @@ export default function BrandHeader({
             src={logoImage}
             alt="Authorised Service Center - Water Purifier"
             className="h-16 sm:h-20 md:h-24 w-auto max-w-[90vw] object-contain mx-auto"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             onError={(e) => {
               e.currentTarget.src = '/assets/brand-header.png';
             }}

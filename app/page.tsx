@@ -110,7 +110,7 @@ export default function HomePage() {
         tollFree="18001201622"
         locationCity="Bengaluru"
         locationState={state}
-        logoImage="https://res.cloudinary.com/b1znkr1c/image/upload/v1790261042/IMG-20260924-WA0019_1.jpg"
+        logoImage="https://res.cloudinary.com/b1znkr1c/image/upload/f_auto,q_auto/v1790261042/IMG-20260924-WA0019_1.jpg"
       />
 
       {/* 2. Hero Purifier Graphic with Doorstep Technician banner */}
@@ -125,6 +125,9 @@ export default function HomePage() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk9HNCjhopbPFEMZ8DfINTyZFNwwELgCjTOHLRz3q6_Fw_BYuYY9R-_AcF1mt_yo1tlW2rAV3jtnStF0c6aA7i9LlgY4BDlcRnMk6mZdDFfHjqQFplXGpAMDGNIprVO3shf5Sjly778lt6cKrHpg5YER8v6RnNGaeWOULKJmswoohfz5JJgT4pwkwhXEYxnHwhAUS3W0pdnPakzFJHSrLnN-LjG74Iu7xFjoEctqnU-6kOWGYLKP7VxA"
               alt="RO Water Purifier Service Center Bangalore - Doorstep Technician"
               className="w-full h-[280px] sm:h-[380px] md:h-[420px] object-cover object-top mx-auto transition-transform duration-300 group-hover:scale-[1.01]"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-transparent pointer-events-none"></div>
             <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 bg-white/95 backdrop-blur-sm px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg shadow-sm border border-gray-200">
@@ -177,6 +180,8 @@ export default function HomePage() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuD84scjixxyU-5KYdES2jS_HsLZ9_C9KQxDqc4JgdczgASVd3t13MRcjBkM4pN2UgUcMUGsS6NiN9Wn-9NIk3NjRVefTecy0K6WDQQTSIatgwG6dlg8_ENlGtPVJh8NHxLZRNdVHgIgm9cXugaOpapTPiABq3bRYpDEYzmZXGp2Ghy7LjyUvzXfPszpb3TfpaYb6cXsS99KqOIsXDrFkw9C2t7O6vyNvf5a9MwWj9yCTCDD4nc-Xmckfw"
               alt="100% Pure & Safe Drinking Water - RO Water Purifier Service"
               className="w-full h-[220px] sm:h-[300px] md:h-[340px] object-cover mx-auto transition-transform duration-300 group-hover:scale-[1.01]"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-transparent pointer-events-none"></div>
             <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 bg-white/95 backdrop-blur-sm px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg shadow-sm border border-gray-200">
