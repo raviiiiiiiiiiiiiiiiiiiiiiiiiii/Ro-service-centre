@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`scroll-smooth ${inter.variable} ${plusJakartaSans.variable}`}>
       <head>
-        <link rel="preload" as="image" href="/assets/homepage-hero.jpg" />
+        <link rel="preload" as="image" href="/assets/homepage-hero.webp" />
         <link rel="preload" as="image" href="/assets/homepage-logo.webp" />
       </head>
       <body className="min-h-screen flex flex-col bg-surface text-on-surface antialiased">
