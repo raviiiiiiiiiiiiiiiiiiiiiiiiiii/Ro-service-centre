@@ -30,12 +30,16 @@ export default function BrandHeader({
         </a>
       </div>
 
-      {/* 2. Image Section: Header Banner / Logo */}
+      {/* 2. Image Section: Header Banner / Logo (Click scrolls to top of current page) */}
       <div className="w-full bg-white py-3 sm:py-4 px-4 flex items-center justify-center border-b border-gray-100">
-        <Link
-          href="/"
-          className="inline-block transition-opacity hover:opacity-95 text-center"
-          title="RO Service Centre Online"
+        <button
+          type="button"
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className="inline-block transition-opacity hover:opacity-95 text-center cursor-pointer bg-transparent border-0 p-0"
+          title="Scroll to top of page"
+          aria-label="Scroll to top of page"
         >
           <img
             src={logoImage}
@@ -45,7 +49,7 @@ export default function BrandHeader({
               e.currentTarget.src = '/assets/brand-header.png';
             }}
           />
-        </Link>
+        </button>
       </div>
 
       {/* 3. Dark Blue Bar with Continuous Sliding Announcement & Red/Coral Hamburger Menu Button */}
@@ -59,7 +63,7 @@ export default function BrandHeader({
                 {/* First set */}
                 <div className="inline-flex items-center shrink-0 pr-16 sm:pr-24">
                   <span>
-                    Professional Doorstep RO Water Purifier Repair, Maintenance, Installation &amp; Filter Replacement Services Across Bangalore — Same Day Service Within 60 to 90 Minutes by Verified Technicians for Kent, Aquaguard, Pureit, AO Smith, LG and All Leading Brands — Call Now:{' '}
+                    Professional Doorstep RO Water Purifier Repair, Maintenance, Installation &amp; Filter Replacement Services Across Bangalore — Same Day Service Within 60 to 90 Minutes by Verified Technicians — Call Now:{' '}
                     <a href={`tel:${phone}`} className="hover:underline font-bold text-white tracking-wide">
                       {phone}
                     </a>
@@ -68,7 +72,7 @@ export default function BrandHeader({
                 {/* Duplicate set for seamless continuous sliding */}
                 <div className="inline-flex items-center shrink-0 pr-16 sm:pr-24" aria-hidden="true">
                   <span>
-                    Professional Doorstep RO Water Purifier Repair, Maintenance, Installation &amp; Filter Replacement Services Across Bangalore — Same Day Service Within 60 to 90 Minutes by Verified Technicians for Kent, Aquaguard, Pureit, AO Smith, LG and All Leading Brands — Call Now:{' '}
+                    Professional Doorstep RO Water Purifier Repair, Maintenance, Installation &amp; Filter Replacement Services Across Bangalore — Same Day Service Within 60 to 90 Minutes by Verified Technicians — Call Now:{' '}
                     <a href={`tel:${phone}`} className="hover:underline font-bold text-white tracking-wide">
                       {phone}
                     </a>
